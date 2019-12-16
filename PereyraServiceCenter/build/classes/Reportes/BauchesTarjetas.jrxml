@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="220" pageHeight="650" columnWidth="180" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="801ef331-e687-4bc1-a42b-11c69bd003f7">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     pagoConTarjeta."numfact" AS pagoConTarjeta_numfact,
+     pagoConTarjeta."Fecha" AS pagoConTarjeta_Fecha,
+     pagoConTarjeta."digitos" AS pagoConTarjeta_digitos,
+     pagoConTarjeta."total" AS pagoConTarjeta_total,
+     pagoConTarjeta."bauche" AS pagoConTarjeta_bauche
+FROM
+     "dbo"."pagoConTarjeta" pagoConTarjeta
+WHERE
+Fecha=CAST(GETDATE()as date)]]>
+	</queryString>
+	<field name="pagoConTarjeta_numfact" class="java.lang.String"/>
+	<field name="pagoConTarjeta_Fecha" class="java.lang.String"/>
+	<field name="pagoConTarjeta_digitos" class="java.lang.String"/>
+	<field name="pagoConTarjeta_total" class="java.math.BigDecimal"/>
+	<field name="pagoConTarjeta_bauche" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="188" height="14" uuid="2a709650-d4bf-45cd-bb3f-c4fb80de748a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desglose bauches]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="0" y="28" width="188" height="14" uuid="778bc198-ad45-49ce-bbd2-59005093d46b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="14" width="188" height="14" uuid="11b3205a-8cc4-4a21-88b4-a91e6f410e1d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tarjetas de Credito]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="21" height="12" uuid="fd1cb223-aa28-44c5-bf76-f702f66b7a4c"/>
+				<textElement>
+					<font fontName="Arial Black" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fact.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="0" width="29" height="12" uuid="c9c89df7-faed-4a3f-a056-10252bea8c24"/>
+				<textElement>
+					<font fontName="Arial Black" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="0" width="49" height="12" uuid="3c57a7a0-f73b-4e7f-8c89-af86f17642d9"/>
+				<textElement>
+					<font fontName="Arial Black" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Term. Tarjeta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="0" width="36" height="12" uuid="9e18447a-d6b8-4775-8d1c-8414f9abe967"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Black" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="43" height="12" uuid="440323ef-42c3-4d50-a873-b64a6af0aeed"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pagoConTarjeta_numfact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="0" width="44" height="12" uuid="143fef14-f4ea-418d-93d9-73737941c602"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pagoConTarjeta_Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="48" height="12" uuid="8a731513-6dd1-42d8-810b-d92bf29d4b87"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pagoConTarjeta_digitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="0" width="36" height="12" uuid="5f649356-75d3-4256-899b-34caffd4780a"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pagoConTarjeta_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="188" height="12" uuid="2580f676-b346-417d-8bab-1200fe78dfbb"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="14" width="188" height="1" uuid="3be4d8f7-957a-43f8-ae01-4cc0d0022f34"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

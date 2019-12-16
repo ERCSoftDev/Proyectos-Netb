@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8e149f6-6ab6-4cb8-b846-ddbe481a4c5d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="MES" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT DISTINCT
+     facturaCli."n_factura" AS facturaCli_n_factura,
+     facturaCli."fecha" AS facturaCli_fecha,
+     facturaCli."codcli" AS facturaCli_codcli,
+     facturaCli."rnc" AS facturaCli_rnc,
+     facturaCli."subtotal" AS facturaCli_subtotal,
+     facturaCli."descuento" AS facturaCli_descuento,
+     facturaCli."itbi" AS facturaCli_itbi,
+     facturaCli."total" AS facturaCli_total,
+     detallefat."n_factura" AS detallefat_n_factura,
+     detallefat."codpro" AS detallefat_codpro,
+     detallefat."producto" AS detallefat_producto,
+     detallefat."cantidad" AS detallefat_cantidad,
+     detallefat."precio_unit" AS detallefat_precio_unit,
+     detallefat."precio_total" AS detallefat_precio_total,
+     detallefat."direccion" AS detallefat_direccion,
+     detallefat."cedula" AS detallefat_cedula,
+     detallefat."nombreVende" AS detallefat_nombreVende,
+     detallefat."nombreCliente" AS detallefat_nombreCliente,
+     facturaCli."NCF" AS facturaCli_NCF
+FROM
+     "dbo"."facturaCli" facturaCli INNER JOIN "dbo"."detallefat" detallefat ON facturaCli."n_factura" = detallefat."n_factura"
+ where fecha=CAST(GETDATE()AS DATE)order by ncf]]>
+	</queryString>
+	<field name="facturaCli_n_factura" class="java.lang.String"/>
+	<field name="facturaCli_fecha" class="java.lang.String"/>
+	<field name="facturaCli_codcli" class="java.lang.String"/>
+	<field name="facturaCli_rnc" class="java.lang.String"/>
+	<field name="facturaCli_subtotal" class="java.lang.String"/>
+	<field name="facturaCli_descuento" class="java.lang.String"/>
+	<field name="facturaCli_itbi" class="java.lang.String"/>
+	<field name="facturaCli_total" class="java.lang.Float"/>
+	<field name="detallefat_n_factura" class="java.lang.String"/>
+	<field name="detallefat_codpro" class="java.lang.String"/>
+	<field name="detallefat_producto" class="java.lang.String"/>
+	<field name="detallefat_cantidad" class="java.math.BigDecimal"/>
+	<field name="detallefat_precio_unit" class="java.lang.Float"/>
+	<field name="detallefat_precio_total" class="java.lang.Float"/>
+	<field name="detallefat_direccion" class="java.lang.String"/>
+	<field name="detallefat_cedula" class="java.lang.String"/>
+	<field name="detallefat_nombreVende" class="java.lang.String"/>
+	<field name="detallefat_nombreCliente" class="java.lang.String"/>
+	<field name="facturaCli_NCF" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="15" width="380" height="47" uuid="4b13331f-6b57-4f78-ad72-ae48b2305cfd"/>
+				<box>
+					<pen lineWidth="1.25" lineColor="#3399FF"/>
+					<topPen lineWidth="1.25" lineColor="#3399FF"/>
+					<leftPen lineWidth="1.25" lineColor="#3399FF"/>
+					<bottomPen lineWidth="1.25" lineColor="#3399FF"/>
+					<rightPen lineWidth="1.25" lineColor="#3399FF"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement x="10" y="15" width="370" height="47" uuid="caaf42ea-607a-45f0-92e1-67f4e30faf57"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[PEREYRA SERVICE CENTER]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="66a0518c-3042-412a-adce-913d58b55e78"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="271" y="0" width="284" height="35" uuid="914bc14d-19c5-48a2-97d2-3c735b67c866"/>
+				<textElement>
+					<font size="24"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Reporte Facturas Clientes]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<frame>
+				<reportElement x="-11" y="18" width="566" height="20" uuid="6c3ed27e-8c51-44ea-b201-bc67a71153c7"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#0066FF"/>
+					<topPen lineWidth="1.0" lineColor="#0066FF"/>
+					<leftPen lineWidth="1.0" lineColor="#0066FF"/>
+					<bottomPen lineWidth="1.0" lineColor="#0066FF"/>
+					<rightPen lineWidth="1.0" lineColor="#0066FF"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="18" width="61" height="20" uuid="254decd7-9536-4389-8610-ff356a6d32d0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[NO, FACT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="18" width="100" height="20" uuid="816d7db4-2350-43bc-9479-1badea87f3a7"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[CLIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="18" width="75" height="20" uuid="7b6d04a1-d5ae-4068-84e0-bfdd0689c9e6"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="18" width="102" height="20" uuid="793f36a5-1345-42a9-8148-b42e8a64e1a8"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[NCF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="18" width="63" height="20" uuid="21e5a7de-665b-481a-920a-3030a0bacc05"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[DESC.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="18" width="61" height="20" uuid="d147f844-c356-424c-923d-5ae359bf643b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[ITBIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="18" width="79" height="20" uuid="0ad3a0d1-e778-4463-8c25-6bff82bd579a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="61" height="20" uuid="485b1edf-2e80-4579-aa07-c40377f218c5"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detallefat_n_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="0" width="100" height="20" uuid="9422adba-3c71-4bf0-87e0-43b6e7ee54f9"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detallefat_nombreCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="161" y="0" width="75" height="20" uuid="b04231d6-4f37-4867-ad59-f3a722f11ced"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facturaCli_fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="0" width="63" height="20" uuid="00ec3c8f-b4e7-47c8-a554-f4d298605b93"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facturaCli_descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="20" uuid="b7c11590-5d12-4b12-b928-2e4d7807b74c"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{facturaCli_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="59" height="20" uuid="ec5b92ab-51e2-480c-9d1e-b669f47fd0e6"/>
+				<textFieldExpression><![CDATA[$F{facturaCli_itbi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="0" width="114" height="20" uuid="955a220b-be56-4bd1-8683-c248857026a8"/>
+				<textFieldExpression><![CDATA[$F{facturaCli_NCF}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="435" y="0" width="80" height="20" uuid="f16216b2-bd2c-41aa-ba3f-3685d4c37a96"/>
+				<textElement textAlignment="Right">
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="0" width="40" height="20" uuid="7ff7eeb6-6b9c-43b0-8909-97642f83dfa2"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

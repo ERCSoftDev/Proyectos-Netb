@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f70d81d2-8f09-454f-a096-cb45da2bb811">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="79"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="SpareSystem" uuid="34568c94-e008-436d-82aa-ec545c246833">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     detallefat."n_factura" AS detallefat_n_factura,
+     detallefat."codpro" AS detallefat_codpro,
+     detallefat."producto" AS detallefat_producto,
+     detallefat."detapro" AS detallefat_detapro,
+     detallefat."cantidad" AS detallefat_cantidad,
+     detallefat."precio_unit" AS detallefat_precio_unit,
+     detallefat."itbis" AS detallefat_itbis,
+     detallefat."itbic" AS detallefat_itbic,
+     detallefat."precio_total" AS detallefat_precio_total,
+     detallefat."direccion" AS detallefat_direccion,
+     detallefat."cedula" AS detallefat_cedula,
+     detallefat."nombreVende" AS detallefat_nombreVende,
+     detallefat."nombreCliente" AS detallefat_nombreCliente,
+     detallefat."id" AS detallefat_id,
+     facturaCli."n_factura" AS facturaCli_n_factura,
+     facturaCli."formaPago" AS facturaCli_formaPago,
+     facturaCli."fechaPago" AS facturaCli_fechaPago,
+     facturaCli."fecha" AS facturaCli_fecha,
+     facturaCli."codcli" AS facturaCli_codcli,
+     facturaCli."rnc" AS facturaCli_rnc,
+     facturaCli."subtotal" AS facturaCli_subtotal,
+     facturaCli."descuento" AS facturaCli_descuento,
+     facturaCli."itbi" AS facturaCli_itbi,
+     facturaCli."total" AS facturaCli_total,
+     facturaCli."NCF" AS facturaCli_NCF,
+     facturaCli."TipoNCF" AS facturaCli_TipoNCF
+FROM
+     "dbo"."detallefat" detallefat,
+     "dbo"."facturaCli" facturaCli]]>
+		</queryString>
+		<field name="detallefat_n_factura" class="java.lang.String"/>
+		<field name="detallefat_codpro" class="java.lang.String"/>
+		<field name="detallefat_producto" class="java.lang.String"/>
+		<field name="detallefat_detapro" class="java.lang.String"/>
+		<field name="detallefat_cantidad" class="java.math.BigDecimal"/>
+		<field name="detallefat_precio_unit" class="java.lang.Float"/>
+		<field name="detallefat_itbis" class="java.lang.Float"/>
+		<field name="detallefat_itbic" class="java.math.BigDecimal"/>
+		<field name="detallefat_precio_total" class="java.lang.Float"/>
+		<field name="detallefat_direccion" class="java.lang.String"/>
+		<field name="detallefat_cedula" class="java.lang.String"/>
+		<field name="detallefat_nombreVende" class="java.lang.String"/>
+		<field name="detallefat_nombreCliente" class="java.lang.String"/>
+		<field name="detallefat_id" class="java.lang.String"/>
+		<field name="facturaCli_n_factura" class="java.lang.String"/>
+		<field name="facturaCli_formaPago" class="java.lang.String"/>
+		<field name="facturaCli_fechaPago" class="java.lang.String"/>
+		<field name="facturaCli_fecha" class="java.lang.String"/>
+		<field name="facturaCli_codcli" class="java.lang.String"/>
+		<field name="facturaCli_rnc" class="java.lang.String"/>
+		<field name="facturaCli_subtotal" class="java.lang.String"/>
+		<field name="facturaCli_descuento" class="java.lang.String"/>
+		<field name="facturaCli_itbi" class="java.lang.String"/>
+		<field name="facturaCli_total" class="java.lang.Float"/>
+		<field name="facturaCli_NCF" class="java.lang.String"/>
+		<field name="facturaCli_TipoNCF" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT
+     detallefat."n_factura" AS detallefat_n_factura,
+     detallefat."codpro" AS detallefat_codpro,
+     detallefat."producto" AS detallefat_producto,
+     detallefat."detapro" AS detallefat_detapro,
+     detallefat."cantidad" AS detallefat_cantidad,
+     detallefat."precio_unit" AS detallefat_precio_unit,
+     detallefat."itbis" AS detallefat_itbis,
+     detallefat."itbic" AS detallefat_itbic,
+     detallefat."precio_total" AS detallefat_precio_total,
+     detallefat."direccion" AS detallefat_direccion,
+     detallefat."cedula" AS detallefat_cedula,
+     detallefat."nombreVende" AS detallefat_nombreVende,
+     detallefat."nombreCliente" AS detallefat_nombreCliente,
+     detallefat."id" AS detallefat_id
+FROM
+     "dbo"."detallefat" detallefat]]>
+	</queryString>
+	<field name="detallefat_n_factura" class="java.lang.String"/>
+	<field name="detallefat_codpro" class="java.lang.String"/>
+	<field name="detallefat_producto" class="java.lang.String"/>
+	<field name="detallefat_detapro" class="java.lang.String"/>
+	<field name="detallefat_cantidad" class="java.math.BigDecimal"/>
+	<field name="detallefat_precio_unit" class="java.lang.Float"/>
+	<field name="detallefat_itbis" class="java.lang.Float"/>
+	<field name="detallefat_itbic" class="java.math.BigDecimal"/>
+	<field name="detallefat_precio_total" class="java.lang.Float"/>
+	<field name="detallefat_direccion" class="java.lang.String"/>
+	<field name="detallefat_cedula" class="java.lang.String"/>
+	<field name="detallefat_nombreVende" class="java.lang.String"/>
+	<field name="detallefat_nombreCliente" class="java.lang.String"/>
+	<field name="detallefat_id" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="203" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="0" y="60" width="555" height="80" uuid="41606811-6360-4689-bfea-8ee148116273"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="SpareSystem" uuid="c1e0f0ed-a463-431c-92d7-6a50e361fe94">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="c066ee9a-c944-4c0a-91ad-28c42c503b99">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="5b7d5486-cf55-42ee-9686-bd0361831886"/>
+								<text><![CDATA[detallefat_n_factura]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="3ba19595-09e6-44fe-a453-895d30e18832"/>
+								<textFieldExpression><![CDATA[$F{detallefat_n_factura}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="663158f1-a744-4afe-a5d8-db57fa38c521">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="6506ac92-0d2e-4258-a2e1-3e7d13c8c6ad"/>
+								<text><![CDATA[detallefat_codpro]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="44e8fdb8-12f8-42ac-9ff2-3fc206ec1769"/>
+								<textFieldExpression><![CDATA[$F{detallefat_codpro}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="48062bcd-1bf1-488b-b6e5-71b7b52a0da4">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="11048697-7a3a-4125-b437-549f173b02c6"/>
+								<text><![CDATA[detallefat_producto]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="16ed38bd-53e1-4b2c-8456-3ddb2808a04b"/>
+								<textFieldExpression><![CDATA[$F{detallefat_producto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d25d64c0-2ae7-468a-8f4d-62de084cac55">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="9b91b87d-2ebf-4f50-a33c-3d9fb0ef7791"/>
+								<text><![CDATA[detallefat_detapro]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="b068c68b-b897-43c6-87de-03cff4f3423e"/>
+								<textFieldExpression><![CDATA[$F{detallefat_detapro}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d34335d4-fe62-46b8-b4bf-ea640b23bc47">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="e0bb1ba6-a52c-4262-9248-fa5d6564708a"/>
+								<text><![CDATA[detallefat_cantidad]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="504673ef-4206-4b20-8bd3-23bb7f9b1b36"/>
+								<textFieldExpression><![CDATA[$F{detallefat_cantidad}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2c1ce204-7445-49f9-997b-3f476ed58213">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="9abfa479-2d70-494f-8b51-0f2a4d9838b1"/>
+								<text><![CDATA[detallefat_precio_unit]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="18e96691-a731-435f-87a2-11e5b18f1d29"/>
+								<textFieldExpression><![CDATA[$F{detallefat_precio_unit}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="1a8b005b-c20e-4ab8-8b83-21b21ca27730">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="35875372-9216-40ad-a0f7-f11bec1fc71d"/>
+								<text><![CDATA[detallefat_itbis]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="1dd69120-60c3-4a1e-a088-4d261f63a1a2"/>
+								<textFieldExpression><![CDATA[$F{detallefat_itbis}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b1968e86-14c8-4f56-99c8-d34a1777df97">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="e950670d-0b91-48d0-8623-4dc1ee6078da"/>
+								<text><![CDATA[detallefat_itbic]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5241e30c-e4cc-4173-a036-6d96cb7f9835"/>
+								<textFieldExpression><![CDATA[$F{detallefat_itbic}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f8c7f763-6515-4ceb-9b43-3ead901d4d3d">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="a1bb5dd1-70fc-41f3-8f43-5b6c76912727"/>
+								<text><![CDATA[detallefat_precio_total]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="f5d97d43-2556-4740-83e2-6f7d38fa2796"/>
+								<textFieldExpression><![CDATA[$F{detallefat_precio_total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="13d60532-9abb-4356-adea-70874dec4319">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="f4219401-9d28-4fa6-9c03-b37658bff5df"/>
+								<text><![CDATA[detallefat_direccion]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="44f27f66-0e04-4118-88d8-88ea6a21dfda"/>
+								<textFieldExpression><![CDATA[$F{detallefat_direccion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c4575b59-5b79-4f90-a8ec-5c7be5491276">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="043ebd0a-853c-4936-8ee2-c0802563100e"/>
+								<text><![CDATA[detallefat_cedula]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="c90d65ca-dffd-42a7-b681-ef8f28e81dcf"/>
+								<textFieldExpression><![CDATA[$F{detallefat_cedula}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="6ab7b909-41f7-45b7-802a-29bd0c6b0d6e">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="c4829183-8215-49e4-a2f3-2bb3f107a293"/>
+								<text><![CDATA[detallefat_nombreVende]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5c0a0d90-c5d1-46d2-a40c-2701aa6b30ee"/>
+								<textFieldExpression><![CDATA[$F{detallefat_nombreVende}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e39970aa-1167-46cf-8b30-ebe9809ccd5e">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="8d348ebf-da5d-479a-b963-174f745ea2e2"/>
+								<text><![CDATA[detallefat_nombreCliente]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="2d237a5a-3c6b-46d5-9f60-7c22d5007b16"/>
+								<textFieldExpression><![CDATA[$F{detallefat_nombreCliente}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b7a83293-5ec6-4f85-acbe-1dfc55765c2a">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="e06e93fd-082f-404d-bdaf-e15a6d9be0c1"/>
+								<text><![CDATA[detallefat_id]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="120c415e-2bff-4219-ac19-349827c8b613"/>
+								<textFieldExpression><![CDATA[$F{detallefat_id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="317a7717-3e55-4c39-9580-85e775b055c2">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="34658232-04d2-47c0-9775-737d68a67ab1"/>
+								<text><![CDATA[facturaCli_n_factura]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="fa2460b4-dd0b-4e85-9c73-f348509f4a2e"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_n_factura}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="39148894-b4eb-4c3d-bc1a-f3a750e1afa6">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="93a2c504-ceee-4605-9991-4246a042731c"/>
+								<text><![CDATA[facturaCli_formaPago]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5562379d-a804-4c35-a1c1-7374f4954023"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_formaPago}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="8de03c1c-e62f-4297-a147-399fdf948125">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="a984865b-1eff-4fd4-99a3-084093052777"/>
+								<text><![CDATA[facturaCli_fechaPago]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="78f80a21-fe26-43a1-ace1-d02d0f67c273"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_fechaPago}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="fd5e01a7-f9a6-4e76-abe2-ea21bd24b491">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="bd02deb9-2d90-4deb-80e1-4a65e89392f2"/>
+								<text><![CDATA[facturaCli_fecha]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="094a5a56-b982-4b6f-b987-10f352dc77a7"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="4003190e-9ac1-42d9-8a2c-9c009fcf0675">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="cc0a0389-0275-4eb4-acb7-39408e0532f9"/>
+								<text><![CDATA[facturaCli_codcli]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="40d21dfe-229d-4b81-b4cc-d75c336b4728"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_codcli}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="428936e5-06fc-4f1e-8e55-32eeb44cba37">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="41cc67b5-0e40-42de-ba0d-dfb7a0601420"/>
+								<text><![CDATA[facturaCli_rnc]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="9e2fe454-3d82-419b-b7d3-f43dd3df060b"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_rnc}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f8360a2f-b5a6-4e06-9898-cecd73005996">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="93b6832c-5403-46f9-a5c2-fe79be00979c"/>
+								<text><![CDATA[facturaCli_subtotal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="fff5a61c-82cc-4109-95a7-657be86de50d"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_subtotal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="8ec060af-044c-484a-9dc1-c5f8c013cf1c">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="5fa809bc-b871-4a83-8c68-7603dc1cd5e2"/>
+								<text><![CDATA[facturaCli_descuento]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5661ec43-1816-4d64-806d-57ee9cdd2537"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_descuento}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="92ec6746-6737-48d9-924c-4cfc7022f1fe">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="54b03e93-68bf-409e-bafb-f10f6af09c55"/>
+								<text><![CDATA[facturaCli_itbi]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="1f068786-7873-4ad8-89b6-f482b5cff9aa"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_itbi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ff91a4ee-0338-44da-b171-fcf00a843972">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="0b78a7c5-4ee0-4232-98d8-17223e2b41ae"/>
+								<text><![CDATA[facturaCli_total]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="80832b25-132d-4e52-89f2-054062213896"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_total}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ba626150-45a9-4624-8f6a-bcf63fbb2488">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="48f2bc81-feb5-453a-9af3-152afeb43be2"/>
+								<text><![CDATA[facturaCli_NCF]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="91f1aaf1-fae4-430a-be1f-3cbe13d330d9"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_NCF}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b4a02f32-7d7a-4b6a-8b25-d26626553ace">
+						<jr:columnHeader style="table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="c0a456ec-aef5-4140-8abf-f46f0f82ca32"/>
+								<text><![CDATA[facturaCli_TipoNCF]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 1_CH" height="30"/>
+						<jr:detailCell style="table 1_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="7ae07e4e-5958-4efe-8118-f48e082c172b"/>
+								<textFieldExpression><![CDATA[$F{facturaCli_TipoNCF}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="36" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

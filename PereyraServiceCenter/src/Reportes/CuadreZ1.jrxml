@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="420" pageHeight="1080" whenNoDataType="AllSectionsNoDetail" columnWidth="392" leftMargin="14" rightMargin="14" topMargin="0" bottomMargin="20" isIgnorePagination="true" uuid="030ad8ae-bcab-4b67-876e-fbfd54485a7f">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codCuadre" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     CuadreDiario."codCuadre" AS CuadreDiario_codCuadre,
+     CuadreDiario."Fecha" AS CuadreDiario_Fecha,
+     CuadreDiario."totalNC" AS CuadreDiario_totalNC,
+     CuadreDiario."totalCK" AS CuadreDiario_totalCK,
+     CuadreDiario."totalFact" AS CuadreDiario_totalFact,
+     CuadreDiario."EfectivoCaja" AS CuadreDiario_EfectivoCaja,
+     CuadreDiario."Diferencia" AS CuadreDiario_Diferencia,
+     CuadreDiario."uno" AS CuadreDiario_uno,
+     CuadreDiario."cinco" AS CuadreDiario_cinco,
+     CuadreDiario."diez" AS CuadreDiario_diez,
+     CuadreDiario."veinte" AS CuadreDiario_veinte,
+     CuadreDiario."veiticinco" AS CuadreDiario_veiticinco,
+     CuadreDiario."cincuenta" AS CuadreDiario_cincuenta,
+     CuadreDiario."cien" AS CuadreDiario_cien,
+     CuadreDiario."dosciento" AS CuadreDiario_dosciento,
+     CuadreDiario."quinientos" AS CuadreDiario_quinientos,
+     CuadreDiario."mil" AS CuadreDiario_mil,
+     CuadreDiario."dosmil" AS CuadreDiario_dosmil,
+     CuadreDiario."valoruno" AS CuadreDiario_valoruno,
+     CuadreDiario."valorcinco" AS CuadreDiario_valorcinco,
+     CuadreDiario."valordiez" AS CuadreDiario_valordiez,
+     CuadreDiario."valorveinte" AS CuadreDiario_valorveinte,
+     CuadreDiario."valorveinticinco" AS CuadreDiario_valorveinticinco,
+     CuadreDiario."valorcincuenta" AS CuadreDiario_valorcincuenta,
+     CuadreDiario."valorcien" AS CuadreDiario_valorcien,
+     CuadreDiario."valordosciento" AS CuadreDiario_valordosciento,
+     CuadreDiario."valorquiniento" AS CuadreDiario_valorquiniento,
+     CuadreDiario."valormil" AS CuadreDiario_valormil,
+     CuadreDiario."valordosmil" AS CuadreDiario_valordosmil,
+     CuadreDiario."usuario" AS CuadreDiario_usuario,
+     CuadreDiario."tarjetaCredito" AS CuadreDiario_tarjetaCredito,
+     DatosEmpresa."nombre" AS DatosEmpresa_nombre,
+     DatosEmpresa."eslogan" AS DatosEmpresa_eslogan,
+     DatosEmpresa."rnc" AS DatosEmpresa_rnc,
+     DatosEmpresa."direccion" AS DatosEmpresa_direccion,
+     DatosEmpresa."tele1" AS DatosEmpresa_tele1,
+     DatosEmpresa."tele2" AS DatosEmpresa_tele2,
+     DatosEmpresa."cajaChica" AS DatosEmpresa_cajaChica,
+     DatosEmpresa."correo" AS DatosEmpresa_correo,
+     CuadreDiario."cajachica" AS CuadreDiario_cajachica,
+     CuadreDiario."gastos" AS CuadreDiario_gastos,
+     CuadreDiario."ingresos" AS CuadreDiario_ingresos,
+     CuadreDiario."diferenciacc" AS CuadreDiario_diferenciacc,
+     CuadreDiario."nc" AS CuadreDiario_nc
+FROM
+     "dbo"."CuadreDiario" CuadreDiario,
+     "dbo"."DatosEmpresa" DatosEmpresa
+WHERE
+     codCuadre = $P{codCuadre}]]>
+	</queryString>
+	<field name="CuadreDiario_codCuadre" class="java.lang.String"/>
+	<field name="CuadreDiario_Fecha" class="java.lang.String"/>
+	<field name="CuadreDiario_totalNC" class="java.lang.String"/>
+	<field name="CuadreDiario_totalCK" class="java.lang.String"/>
+	<field name="CuadreDiario_totalFact" class="java.lang.String"/>
+	<field name="CuadreDiario_EfectivoCaja" class="java.lang.String"/>
+	<field name="CuadreDiario_Diferencia" class="java.lang.String"/>
+	<field name="CuadreDiario_uno" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_cinco" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_diez" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_veinte" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_veiticinco" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_cincuenta" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_cien" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_dosciento" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_quinientos" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_mil" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_dosmil" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valoruno" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valorcinco" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valordiez" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valorveinte" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valorveinticinco" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valorcincuenta" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valorcien" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valordosciento" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valorquiniento" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valormil" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_valordosmil" class="java.math.BigDecimal"/>
+	<field name="CuadreDiario_usuario" class="java.lang.String"/>
+	<field name="CuadreDiario_tarjetaCredito" class="java.lang.String"/>
+	<field name="DatosEmpresa_nombre" class="java.lang.String"/>
+	<field name="DatosEmpresa_eslogan" class="java.lang.String"/>
+	<field name="DatosEmpresa_rnc" class="java.lang.String"/>
+	<field name="DatosEmpresa_direccion" class="java.lang.String"/>
+	<field name="DatosEmpresa_tele1" class="java.lang.String"/>
+	<field name="DatosEmpresa_tele2" class="java.lang.String"/>
+	<field name="DatosEmpresa_cajaChica" class="java.math.BigDecimal"/>
+	<field name="DatosEmpresa_correo" class="java.lang.String"/>
+	<field name="CuadreDiario_cajachica" class="java.lang.String"/>
+	<field name="CuadreDiario_gastos" class="java.lang.String"/>
+	<field name="CuadreDiario_ingresos" class="java.lang.String"/>
+	<field name="CuadreDiario_diferenciacc" class="java.lang.String"/>
+	<field name="CuadreDiario_nc" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="187">
+			<staticText>
+				<reportElement x="98" y="92" width="54" height="12" uuid="2c86dbdb-872c-43ac-9e93-6cd6fbb86405"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[NO.CUADRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="104" width="89" height="12" uuid="36a4d8f1-e974-4a40-9209-7f0b135b2fa4"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[FECHA DEL CUADRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="185" height="23" uuid="dfaae2f4-b3f1-44a0-8854-824228c8ecca"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Cuadre Diario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="153" width="185" height="21" uuid="aff3f308-772c-4d02-9f31-32e226b704e7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Reporte X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="33" width="22" height="12" uuid="0ca4f4c4-93b3-45ef-8fc2-2e38159cc434"/>
+				<textElement>
+					<font fontName="Arial Black" size="8"/>
+				</textElement>
+				<text><![CDATA[RNC:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="130" width="185" height="1" uuid="d39e9fca-4b97-4aac-b8d2-c8119f7cc791"/>
+			</line>
+			<line>
+				<reportElement x="1" y="173" width="184" height="1" uuid="0708bbae-843a-4897-b48c-8f831a3fde21"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="186" height="19" uuid="2caa9434-96e2-48c1-ae6b-949f066672d4"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="33" width="101" height="12" uuid="ca11c47e-2c74-4644-ae6e-44ed1d334f6a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_rnc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="186" height="14" uuid="282a7cdf-a95a-4af0-a1ed-4e986b63e33b"/>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_eslogan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="44" width="55" height="11" uuid="33b0657f-ce6a-4abd-8a84-1affc9a12ca4"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_tele1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="44" width="70" height="11" uuid="2ee2ac22-ee59-4907-8a25-97bc9854ec22"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_tele2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="54" width="186" height="12" uuid="d8e2c93e-79c5-41a3-bfd9-ca0551133005"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="92" width="30" height="12" uuid="f7829ac0-e8b3-4c3f-90e1-b19b58fb877c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Black" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_codCuadre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="103" width="40" height="12" uuid="e5a4b840-9d67-4313-bb22-c4ce1d65dba6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_Fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="605">
+			<staticText>
+				<reportElement x="0" y="32" width="79" height="12" uuid="4b81fed1-a362-4e24-813f-14627ed47d9e"/>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Facturas al contado:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="90" y="18" width="96" height="12" uuid="691b7965-84c9-4fb8-a1fd-bba99aa4c57d"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_totalCK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="44" width="78" height="12" uuid="5b743777-2f26-4544-ab77-27ef878922d3"/>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Facturas a Creditos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="274" width="55" height="14" uuid="abf1af6e-fb65-4c72-aa8e-38363ebc3ef1"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Diferencia:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="90" y="44" width="96" height="12" uuid="8726ce61-6fee-497f-b0ad-93a19058edf9"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_totalNC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="225" width="66" height="12" uuid="9a165f0d-fda1-4e6f-a134-7ddbbe0ae6be"/>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Total cobrado:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="89" y="248" width="97" height="12" uuid="a41cfe2f-42f5-4423-b545-e5577b6f5607"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_EfectivoCaja}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="98" y="274" width="88" height="14" uuid="e15cf4b2-11b9-4ff3-9788-73d2744f3b4a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_Diferencia}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="90" y="32" width="96" height="12" uuid="08d76abb-c65c-4626-804a-bfc06df02c5e"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="SansSerif" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_totalFact}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="206" width="89" height="14" uuid="747d1487-2b78-4861-97eb-6132d9c04b67"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Totales de dinero:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="485" width="90" height="12" uuid="7ad1cfe7-f177-4a17-be53-77cf38b6ecc9"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuadre realizado por:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="497" width="186" height="12" uuid="e6c5f2b2-65ce-4c18-afcd-1f4195fdf583"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_usuario}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="186" height="14" uuid="dc244f3b-4e6e-4506-bbaa-dd8e5d77d844"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Totales Factura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="18" width="55" height="12" uuid="6bcaaf66-7e67-4293-ac00-08a020e855d6"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total vendido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="237" width="78" height="12" uuid="f50e73d6-e830-4f49-b3d0-359b004af8ca"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Tarjetas de creditos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="248" width="38" height="12" uuid="14ca74f5-7fe4-49b5-98b1-35b75d7c4ec4"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Efectivo:]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="0" y="508" width="186" height="12" uuid="26d48af9-0ee7-40e1-babb-300a75bc04d0"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="561" width="186" height="12" uuid="3f4c265a-a0bb-4cec-8bed-eb2e0d4ea7d6"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma]]></text>
+			</staticText>
+			<line>
+				<reportElement x="22" y="560" width="142" height="1" uuid="fb207b04-0870-470a-b238-1f1047833a0f"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="304" width="98" height="14" uuid="096d3283-922f-4796-a199-9ab81bd2b4c2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adicional desglose:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="346" width="21" height="12" uuid="5019bef6-fe98-4e7c-8acd-3db4f7ff2fbc"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[5   x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="357" width="21" height="12" uuid="9a83dcd3-db2f-433e-9cd5-3f68d4926f16"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[10 x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="368" width="20" height="12" uuid="84691130-a0e5-4685-85b6-300bfc45b744"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[25 x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="334" width="22" height="12" uuid="0fa4d167-3f88-41c1-ba5c-26a64a708d74"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1   x]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="69" y="334" width="25" height="12" uuid="09cf7053-4bf2-4ca8-a85c-1474497bc49a"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_uno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="346" width="25" height="12" uuid="5b309e58-9f41-4542-b222-3cebd6c8309d"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_cinco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="357" width="24" height="12" uuid="948dcf73-6e33-4389-864d-ea8688a202fd"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_diez}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="49" y="409" width="25" height="12" uuid="253dc5e2-dad8-49da-8422-af65cc54aff2"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[100 x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="421" width="25" height="12" uuid="d3b3e06b-4499-4c1a-a7ec-e6ea4744a2e8"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[200 x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="385" width="25" height="12" uuid="5b9d7f7a-ffa7-458f-ae23-15d7c6f83e7b"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[20   x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="397" width="25" height="12" uuid="98296f66-0724-4e12-8b02-e67fa7d89825"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[50   x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="433" width="25" height="12" uuid="ad44b6dc-58b9-4919-b61a-f7d9b19c2b27"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[500 x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="445" width="25" height="12" uuid="9acd051d-c085-4086-bb8e-c73ccd8000e3"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1000 x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="457" width="25" height="12" uuid="eeb2b320-e0c7-4433-a182-2afae38509af"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2000 x]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="385" width="20" height="12" uuid="8f712e80-df63-4272-9848-017b50b4a796"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_veinte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="397" width="20" height="12" uuid="527e1206-294e-48d6-94c4-19a8907f9335"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_cincuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="409" width="20" height="12" uuid="7fee0046-c4ea-4949-be11-cd3b156b7a98"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_cien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="421" width="20" height="12" uuid="6cb04fa6-f63a-427e-aa52-9eba15ae65d7"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_dosciento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="445" width="20" height="12" uuid="5cda1e58-fab8-45d6-bc6a-1b7884d77c71"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_mil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="457" width="20" height="12" uuid="7bd9e262-a2e3-42d2-a7d5-830d9cd05120"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_dosmil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="68" width="89" height="14" uuid="324b83f5-4789-4233-9ba6-b8cad4479c8e"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Otros totales:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="96" width="66" height="12" uuid="70b4eca5-8016-4952-a303-a7b9f5def634"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Notas de debito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="84" width="66" height="12" uuid="250d879e-2d7c-4d9d-91d6-dbba2428ac3b"/>
+				<textElement verticalAlignment="Top">
+					<font size="8" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Notas de credito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="108" width="66" height="12" uuid="e9b3cdde-81f0-4fb6-9715-88d26bbc9dad"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Devoluciones:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="320" width="185" height="1" uuid="417533ea-dbb7-41f6-9542-822490ce705f"/>
+			</line>
+			<textField>
+				<reportElement x="70" y="368" width="24" height="12" uuid="f3ed94d4-5b65-4d2c-8f6a-ca41da44de82"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_veiticinco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="334" width="42" height="12" uuid="21db9d04-77ab-4d2a-9f32-a218bfc16c94"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valoruno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="345" width="42" height="12" uuid="4a67a45e-403f-4cdd-a245-ca31e40c819a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valorcinco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="356" width="42" height="12" uuid="dd90dcd9-5d44-47c2-be1a-6be120072da4"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valordiez}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="367" width="42" height="12" uuid="7b6cfb2f-c2f5-48e8-b10e-350f67e437d2"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valorveinticinco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="433" width="20" height="12" uuid="8a961af5-1584-433f-b646-0123264b30be"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_quinientos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="385" width="42" height="12" uuid="ff381ca2-37f1-4c42-a3bb-7c9db57ad92e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valorveinte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="397" width="42" height="12" uuid="63d31924-259c-4c65-a02d-cecae58f795f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valorcincuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="409" width="42" height="12" uuid="da3359d3-3f16-4a7e-bb0c-4e3d35d2649f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valorcien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="421" width="42" height="12" uuid="957813f9-69db-439f-a40a-0e57a638aae3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valordosciento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="433" width="42" height="12" uuid="7cc279c2-653b-4724-a55d-cf64ff68d8bf"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valorquiniento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="445" width="42" height="12" uuid="34e738aa-846c-4390-ab39-2e368eb48191"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valormil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="457" width="42" height="12" uuid="7a0a75ab-8692-4700-987e-8efcf41d28b4"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_valordosmil}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement x="89" y="237" width="97" height="12" uuid="8de7381c-5fb6-4f9c-a6e2-eb1f6553315d"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_tarjetaCredito}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="131" width="100" height="14" uuid="1f55ea1e-0351-4634-be93-b4e69ba8d363"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Movimiento de caja:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="147" width="100" height="12" uuid="58e9185f-5c68-427e-8577-1e0104b4de53"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Valor de Caja/chica:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="158" width="100" height="12" uuid="1cde14b3-8a4e-4b13-9ab7-02df6626fd85"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Gastos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="169" width="100" height="12" uuid="36a267d9-eb92-4366-a53d-ca57ff9c2d93"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Ingresos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="181" width="100" height="12" uuid="5509da52-e95c-414a-b698-82aa9e041545"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Diferencia en caja/chica:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement x="112" y="147" width="74" height="12" uuid="abf50aab-0d05-4b3b-9eeb-db0790842132"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_cajachica}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement x="112" y="159" width="74" height="12" uuid="5618d5cf-c7e5-4861-8a7b-c7835fbadf12"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_gastos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement x="112" y="171" width="74" height="12" uuid="95b01161-a31d-43bc-9047-d79377ce2b41"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_ingresos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement x="112" y="183" width="74" height="12" uuid="ce72d235-2cdd-4264-bf41-c345d51a5e56"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_diferenciacc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="82" width="96" height="12" uuid="6d3bf320-7053-4ec2-b507-f97c52fbaae8"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_nc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="1" splitType="Stretch"/>
+	</detail>
+	<pageFooter>
+		<band height="3" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="1" splitType="Stretch"/>
+	</summary>
+</jasperReport>
