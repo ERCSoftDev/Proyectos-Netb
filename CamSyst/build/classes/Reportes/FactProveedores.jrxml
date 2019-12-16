@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     detallefactProvee."n_fac" AS detallefactProvee_n_fac,
+     detallefactProvee."nombreprov" AS detallefactProvee_nombreprov,
+     detallefactProvee."direccion" AS detallefactProvee_direccion,
+     detallefactProvee."tel" AS detallefactProvee_tel,
+     detallefactProvee."usuario" AS detallefactProvee_usuario,
+     detallefactProvee."codpro" AS detallefactProvee_codpro,
+     detallefactProvee."nombrepro" AS detallefactProvee_nombrepro,
+     detallefactProvee."detalle" AS detallefactProvee_detalle,
+     detallefactProvee."stock" AS detallefactProvee_stock,
+     detallefactProvee."precio" AS detallefactProvee_precio,
+     detallefactProvee."total" AS detallefactProvee_total,
+     factura."n_fac" AS factura_n_fac,
+     factura."fecha" AS factura_fecha,
+     factura."codprov" AS factura_codprov,
+     factura."rnc" AS factura_rnc,
+     factura."subtotal" AS factura_subtotal,
+     factura."descuento" AS factura_descuento,
+     factura."itbis" AS factura_itbis,
+     factura."total" AS factura_total
+FROM
+     "dbo"."factura" factura INNER JOIN "dbo"."detallefactProvee" detallefactProvee ON factura."n_fac" = detallefactProvee."n_fac"]]>
+	</queryString>
+	<field name="detallefactProvee_n_fac" class="java.lang.String"/>
+	<field name="detallefactProvee_nombreprov" class="java.lang.String"/>
+	<field name="detallefactProvee_direccion" class="java.lang.String"/>
+	<field name="detallefactProvee_tel" class="java.lang.String"/>
+	<field name="detallefactProvee_usuario" class="java.lang.String"/>
+	<field name="detallefactProvee_codpro" class="java.lang.String"/>
+	<field name="detallefactProvee_nombrepro" class="java.lang.String"/>
+	<field name="detallefactProvee_detalle" class="java.lang.String"/>
+	<field name="detallefactProvee_stock" class="java.lang.Integer"/>
+	<field name="detallefactProvee_precio" class="java.math.BigDecimal"/>
+	<field name="detallefactProvee_total" class="java.math.BigDecimal"/>
+	<field name="factura_n_fac" class="java.lang.String"/>
+	<field name="factura_fecha" class="java.lang.String"/>
+	<field name="factura_codprov" class="java.lang.String"/>
+	<field name="factura_rnc" class="java.lang.String"/>
+	<field name="factura_subtotal" class="java.lang.String"/>
+	<field name="factura_descuento" class="java.lang.String"/>
+	<field name="factura_itbis" class="java.lang.String"/>
+	<field name="factura_total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="307" height="62"/>
+				<textElement lineSpacing="Single">
+					<font size="48"/>
+				</textElement>
+				<text><![CDATA[Vigilandotech]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="455" y="0" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="152" y="0" width="244" height="35"/>
+				<textElement lineSpacing="Single">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Facturas Proveedores]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<frame>
+				<reportElement x="-13" y="2" width="568" height="20"/>
+				<box>
+					<pen lineWidth="1.5" lineColor="#3399FF"/>
+					<topPen lineWidth="1.5" lineColor="#3399FF"/>
+					<leftPen lineWidth="1.5" lineColor="#3399FF"/>
+					<bottomPen lineWidth="1.5" lineColor="#3399FF"/>
+					<rightPen lineWidth="1.5" lineColor="#3399FF"/>
+				</box>
+				<staticText>
+					<reportElement x="288" y="0" width="84" height="20"/>
+					<textElement verticalAlignment="Middle" lineSpacing="Single">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[USUARIO]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="2" width="70" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO. FACT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="2" width="100" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVEEDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="2" width="73" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="2" width="56" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ITBIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="2" width="55" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="2" width="65" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESC.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="70" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{factura_n_fac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{detallefactProvee_nombreprov}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="0" width="73" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{factura_fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="359" y="0" width="65" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{factura_descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="56" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{factura_itbis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="55" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{factura_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="84" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{detallefactProvee_usuario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20"/>
+				<textElement lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc33ff4e-c808-467e-a5c6-56dc3d102b7f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="909"/>
+	<parameter name="noacta" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     Bautismos."noacta" AS Bautismos_noacta,
+     Bautismos."libroasent" AS Bautismos_libroasent,
+     Bautismos."pagina" AS Bautismos_pagina,
+     Bautismos."nombreb" AS Bautismos_nombreb,
+     Bautismos."apellidob" AS Bautismos_apellidob,
+     Bautismos."fecha" AS Bautismos_fecha,
+     Bautismos."lugarn" AS Bautismos_lugarn,
+     Bautismos."sexo" AS Bautismos_sexo,
+     Bautismos."fechab" AS Bautismos_fechab,
+     Bautismos."nompa" AS Bautismos_nompa,
+     Bautismos."cedpa" AS Bautismos_cedpa,
+     Bautismos."nomma" AS Bautismos_nomma,
+     Bautismos."cedma" AS Bautismos_cedma,
+     Bautismos."padrino" AS Bautismos_padrino,
+     Bautismos."madrina" AS Bautismos_madrina,
+     Bautismos."regno" AS Bautismos_regno,
+     Bautismos."folio" AS Bautismos_folio,
+     Bautismos."declano" AS Bautismos_declano,
+     Bautismos."año" AS Bautismos_año,
+     Bautismos."circu" AS Bautismos_circu,
+     Bautismos."rev" AS Bautismos_rev,
+     Bautismos."contma" AS Bautismos_contma,
+     Bautismos."nomparroquia" AS Bautismos_nomparroquia,
+     Bautismos."dirparroquia" AS Bautismos_dirparroquia,
+     Bautismos."fecham" AS Bautismos_fecham,
+     Bautismos."otros" AS Bautismos_otros,
+     datosparroquia."nombre" AS datosparroquia_nombre,
+     datosparroquia."eslogan" AS datosparroquia_eslogan,
+     datosparroquia."rnc" AS datosparroquia_rnc,
+     datosparroquia."direccion" AS datosparroquia_direccion,
+     datosparroquia."tele1" AS datosparroquia_tele1,
+     datosparroquia."tele2" AS datosparroquia_tele2,
+     datosparroquia."correo" AS datosparroquia_correo,
+     datosparroquia."preciobau" AS datosparroquia_preciobau,
+     datosparroquia."parroco" AS datosparroquia_parroco
+FROM
+     "dbo"."Bautismos" Bautismos,
+     "dbo"."datosparroquia" datosparroquia
+WHERE
+     noacta = $P{noacta}]]>
+	</queryString>
+	<field name="Bautismos_noacta" class="java.lang.String"/>
+	<field name="Bautismos_libroasent" class="java.lang.String"/>
+	<field name="Bautismos_pagina" class="java.lang.String"/>
+	<field name="Bautismos_nombreb" class="java.lang.String"/>
+	<field name="Bautismos_apellidob" class="java.lang.String"/>
+	<field name="Bautismos_fecha" class="java.lang.String"/>
+	<field name="Bautismos_lugarn" class="java.lang.String"/>
+	<field name="Bautismos_sexo" class="java.lang.String"/>
+	<field name="Bautismos_fechab" class="java.lang.String"/>
+	<field name="Bautismos_nompa" class="java.lang.String"/>
+	<field name="Bautismos_cedpa" class="java.lang.String"/>
+	<field name="Bautismos_nomma" class="java.lang.String"/>
+	<field name="Bautismos_cedma" class="java.lang.String"/>
+	<field name="Bautismos_padrino" class="java.lang.String"/>
+	<field name="Bautismos_madrina" class="java.lang.String"/>
+	<field name="Bautismos_regno" class="java.lang.String"/>
+	<field name="Bautismos_folio" class="java.lang.String"/>
+	<field name="Bautismos_declano" class="java.lang.String"/>
+	<field name="Bautismos_año" class="java.lang.String"/>
+	<field name="Bautismos_circu" class="java.lang.String"/>
+	<field name="Bautismos_rev" class="java.lang.String"/>
+	<field name="Bautismos_contma" class="java.lang.String"/>
+	<field name="Bautismos_nomparroquia" class="java.lang.String"/>
+	<field name="Bautismos_dirparroquia" class="java.lang.String"/>
+	<field name="Bautismos_fecham" class="java.lang.String"/>
+	<field name="Bautismos_otros" class="java.lang.String"/>
+	<field name="datosparroquia_nombre" class="java.lang.String"/>
+	<field name="datosparroquia_eslogan" class="java.lang.String"/>
+	<field name="datosparroquia_rnc" class="java.lang.String"/>
+	<field name="datosparroquia_direccion" class="java.lang.String"/>
+	<field name="datosparroquia_tele1" class="java.lang.String"/>
+	<field name="datosparroquia_tele2" class="java.lang.String"/>
+	<field name="datosparroquia_correo" class="java.lang.String"/>
+	<field name="datosparroquia_preciobau" class="java.lang.String"/>
+	<field name="datosparroquia_parroco" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="795" splitType="Stretch">
+			<line>
+				<reportElement x="64" y="89" width="415" height="1" forecolor="#000000" uuid="b210cc05-c600-408c-8735-f8da46517acb"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="51" y="121" width="448" height="20" forecolor="#CC0000" uuid="e9b00bd7-a7b1-4d9c-9bc5-ee0c0f84f716"/>
+				<box>
+					<pen lineWidth="1.25" lineColor="#666666"/>
+					<topPen lineWidth="1.25" lineColor="#666666"/>
+					<leftPen lineWidth="1.25" lineColor="#666666"/>
+					<bottomPen lineWidth="1.25" lineColor="#666666"/>
+					<rightPen lineWidth="1.25" lineColor="#666666"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificado de Bautismo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="161" width="322" height="20" forecolor="#000000" uuid="91817565-40e2-4ac2-afb5-365751cf83ab"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[El que suscribe certifica que, en el Libro de Bautismo No:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="181" width="61" height="20" forecolor="#000000" uuid="2a92b21a-df57-4777-ad3f-84a33a0bc989"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_noacta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="367" y="161" width="34" height="20" forecolor="#000000" uuid="415ef692-930a-450c-8c30-40f56483859a"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Folio: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="401" y="161" width="43" height="20" forecolor="#000000" uuid="f8351bc4-9f12-4831-bee2-c744e24683da"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_folio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="444" y="161" width="65" height="20" forecolor="#000000" uuid="5834c651-bfe8-400b-9f65-3b34f737b200"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Acta:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="339" y="161" width="52" height="20" forecolor="#000000" uuid="0063328f-21d2-450f-a23b-7f4538124d22"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_libroasent}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="114" y="181" width="39" height="20" forecolor="#000000" uuid="4db6513e-f725-465f-8f1f-813b6571b914"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="153" y="181" width="76" height="20" forecolor="#000000" uuid="aa8ad6e7-9541-4426-a521-546851dc82d5"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_fechab}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="217" y="181" width="12" height="20" uuid="3ac4e34c-b505-4997-ac7c-5b7a472f781f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="181" width="56" height="20" forecolor="#000000" uuid="2a528b22-492d-42bf-8790-ab660ca6be26"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[el Revdo.P.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="284" y="181" width="225" height="20" forecolor="#000000" uuid="80d083c9-84df-4283-8536-b8e95f88a7c1"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_rev}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="201" width="126" height="20" forecolor="#000000" uuid="2e575faf-8730-48ba-bf7d-7bb230165c1f"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Bautizó solemnemente a:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="233" width="555" height="20" forecolor="#000000" uuid="3db931f6-eb7f-4fac-9a93-df02eaab46a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_nombreb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="254" width="555" height="20" forecolor="#000000" uuid="5c3c81ce-eedc-473c-9281-53bc6eed296b"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_apellidob}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="96" y="253" width="363" height="1" uuid="2e3a02c5-f73e-4f4b-99e2-437b1cb25d61"/>
+			</line>
+			<staticText>
+				<reportElement x="51" y="291" width="61" height="20" forecolor="#000000" uuid="f75ffa60-92a7-4273-87a1-0ba420fb9da1"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Nacido en:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="290" width="49" height="20" forecolor="#000000" uuid="a7146265-ec08-4a56-8a43-64617a0719b6"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[En fecha:]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="112" y="310" width="178" height="1" forecolor="#000000" uuid="a8d9c20c-b71c-46c2-8c84-7cd97b434f87"/>
+			</line>
+			<textField>
+				<reportElement x="112" y="290" width="178" height="20" forecolor="#000000" uuid="e20b6f98-6b09-4525-87f5-190e8795dd8a"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_lugarn}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="344" y="309" width="145" height="1" forecolor="#000000" uuid="92df7d21-2acc-412e-b2aa-cdd2d5dd1b00"/>
+			</line>
+			<textField>
+				<reportElement x="344" y="290" width="100" height="19" forecolor="#000000" uuid="007a9c96-2bd4-4677-9faf-20e23392c20d"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="311" width="89" height="20" forecolor="#000000" uuid="cd4f4c42-e219-413f-9944-ea952df0dab0"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Hijo(a) del señor:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="140" y="330" width="349" height="1" forecolor="#000000" uuid="7b445ff2-4e62-4ad9-8a82-ed09d63f4938"/>
+			</line>
+			<textField>
+				<reportElement x="140" y="311" width="349" height="19" forecolor="#000000" uuid="838a55f3-1247-40d6-ab25-19aa7297659f"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_nompa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="331" width="77" height="20" forecolor="#000000" uuid="4e327fc7-adc4-4743-98b7-a7a685a82f14"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[y de la señora:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="140" y="350" width="349" height="1" forecolor="#000000" uuid="e60bcc99-7e3d-4506-82bd-7931e14d526d"/>
+			</line>
+			<textField>
+				<reportElement x="140" y="331" width="349" height="19" forecolor="#000000" uuid="253c751c-7594-4c75-9971-d026309d2715"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_nomma}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="369" width="276" height="20" forecolor="#000000" uuid="a2be7491-c34f-4b3f-b8b6-e72cbbbee6b9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Según consta en el Libro de Registro de Nacimiento No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="327" y="369" width="30" height="20" forecolor="#000000" uuid="aecd549f-b04a-4f32-8155-6f3d3b6d91d9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_regno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="357" y="369" width="24" height="20" forecolor="#000000" uuid="e2bfd707-792a-4b9b-b16d-25c915ff2a5c"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Folio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="389" y="369" width="39" height="19" forecolor="#000000" uuid="2fa43027-7341-48e6-8002-d8ccd3bbe9cd"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_folio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="428" y="369" width="81" height="19" forecolor="#000000" uuid="b2108dcd-a254-40d2-ac4f-77fa9b842228"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Declaración No. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="389" width="45" height="20" forecolor="#000000" uuid="eeb0cc90-77c2-4ab6-af15-2a471d9c15cc"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_declano}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="84" y="389" width="56" height="20" forecolor="#000000" uuid="35f23d6d-020d-42b4-857e-60a8935486da"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[del año]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="128" y="389" width="69" height="20" forecolor="#000000" uuid="63c8d668-f41b-473b-b01a-9a3d9358d99a"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_año}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="166" y="389" width="41" height="20" forecolor="#000000" uuid="5fb1c9bf-1757-4551-a3c1-bec2efdfa447"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[de la ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="197" y="389" width="292" height="20" forecolor="#000000" uuid="2f4dcf7a-3457-4ced-af00-ecdc68570260"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_circu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="432" width="115" height="20" forecolor="#000000" uuid="6116cb4b-33ec-42a9-a274-fe40937c594f"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fueron sus padrinos:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="51" y="472" width="210" height="1" forecolor="#000000" uuid="5015b874-5a88-4ee5-ae7d-a6360ea2ae3f"/>
+			</line>
+			<line>
+				<reportElement x="284" y="471" width="205" height="1" forecolor="#000000" uuid="91640a10-8c56-45b9-8d49-da8c8f75ba15"/>
+			</line>
+			<staticText>
+				<reportElement x="273" y="452" width="11" height="20" forecolor="#000000" uuid="71cf845f-6c2c-4573-bc01-b678fdb2c711"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[y]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="452" width="210" height="20" forecolor="#000000" uuid="1573ad8c-bc10-46f0-8638-3274646635a6"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_padrino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="452" width="205" height="20" forecolor="#000000" uuid="02c1e114-a1d8-48ca-9840-fc094e8ac34c"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_madrina}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="512" width="115" height="20" forecolor="#000000" uuid="4f664098-854e-47d2-bd14-d8f7de8c8d78"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOTAS MARGINALES:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="166" y="532" width="323" height="1" forecolor="#000000" uuid="27b06497-4f9c-462a-9d13-04d83bc2de8f"/>
+			</line>
+			<line>
+				<reportElement x="51" y="554" width="438" height="1" forecolor="#000000" uuid="799583dd-5195-4b00-8752-6fe41d4f0469"/>
+			</line>
+			<line>
+				<reportElement x="51" y="573" width="438" height="2" forecolor="#000000" uuid="81dd28a4-ef34-4eb7-9a7e-272e67a9ba5a"/>
+			</line>
+			<staticText>
+				<reportElement x="51" y="587" width="45" height="20" forecolor="#000000" uuid="dc00cf71-0037-48ef-bb21-eb2dbac71235"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Dado en ]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="74" y="607" width="123" height="20" forecolor="#CC0000" uuid="6bc17e35-6b42-4f0e-aff1-686540c90408"/>
+				<textElement verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="51" y="672" width="239" height="1" forecolor="#000000" uuid="b7bef43b-2ca2-4e77-a0e6-28180e65cb8c"/>
+			</line>
+			<staticText>
+				<reportElement x="401" y="693" width="100" height="20" forecolor="#000000" uuid="28be36b1-ec10-45c9-9020-5536225a0804"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SELLO]]></text>
+			</staticText>
+			<elementGroup/>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="58" uuid="c1fe2871-4d08-4e3c-a478-602e710be2ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Agency FB" size="36" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datosparroquia_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="58" width="555" height="20" forecolor="#CC0000" uuid="434ceaee-d0a4-4c4b-a91d-68b192706ce6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datosparroquia_eslogan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="728" width="299" height="20" uuid="c01f6472-c8d7-49de-bab1-f38301df85f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datosparroquia_direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="728" width="66" height="20" uuid="d68d8798-abaf-4375-be97-d2721c96de72"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datosparroquia_tele1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="728" width="23" height="20" uuid="fb51be95-e450-48a0-98e5-675af3a4b27b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="112" y="748" width="232" height="20" uuid="0d2a50e2-7706-4a57-8002-516ebd71cce7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datosparroquia_correo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="339" y="748" width="31" height="20" uuid="ccada73b-f42c-41ac-8c2d-8022afa5e5ad"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RNC.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="748" width="80" height="20" uuid="971b646a-b971-4351-9b91-69f6e13249b4"/>
+				<textElement>
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datosparroquia_rnc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="673" width="239" height="20" uuid="6cd78c44-e226-4084-8d29-167a944eae6d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datosparroquia_parroco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="693" width="239" height="21" uuid="c0594dfa-648d-42e1-a0f9-2a24359ded51"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parroco]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="166" y="512" width="323" height="20" uuid="189e9f0b-440b-4147-8e00-95d641afa47b"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bautismos_otros}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="97" y="274" width="362" height="1" uuid="6836bd28-0de1-4788-9c32-eb7a2cd66580"/>
+			</line>
+			<textField>
+				<reportElement x="97" y="587" width="392" height="20" uuid="d660bf2b-3d0c-44d9-9d2f-59e5f75daca6"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{datosparroquia_direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="51" y="607" width="33" height="20" uuid="29724b90-46c7-462c-859d-62ffe363b220"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[hoy:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="479" y="0" width="55" height="90" uuid="9d731c90-769b-42b8-a841-9917491c8c08"/>
+				<imageExpression><![CDATA["C:\\Users\\Computech\\Documents\\NetBeansProjects\\Actasyst-SanRamonNonato\\src\\Imagenes\\San_Ramon_Nonato-200x200.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="7"/>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

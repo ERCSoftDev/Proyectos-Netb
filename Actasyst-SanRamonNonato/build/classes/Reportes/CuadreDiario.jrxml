@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b6eccc8c-e3fa-4aa3-93b3-6d83449feab7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     Cuadrediario."noacta" AS Cuadrediario_noacta,
+     Cuadrediario."libroasenta" AS Cuadrediario_libroasenta,
+     Cuadrediario."pagina" AS Cuadrediario_pagina,
+     Cuadrediario."nombre" AS Cuadrediario_nombre,
+     Cuadrediario."apellido" AS Cuadrediario_apellido,
+     Cuadrediario."fecha" AS Cuadrediario_fecha,
+     Cuadrediario."valorbau" AS Cuadrediario_valorbau
+FROM
+     "dbo"."Cuadrediario" Cuadrediario where 
+fecha = CAST(GETDATE()as date)]]>
+	</queryString>
+	<field name="Cuadrediario_noacta" class="java.lang.String"/>
+	<field name="Cuadrediario_libroasenta" class="java.lang.String"/>
+	<field name="Cuadrediario_pagina" class="java.lang.String"/>
+	<field name="Cuadrediario_nombre" class="java.lang.String"/>
+	<field name="Cuadrediario_apellido" class="java.lang.String"/>
+	<field name="Cuadrediario_fecha" class="java.lang.String"/>
+	<field name="Cuadrediario_valorbau" class="java.math.BigDecimal"/>
+	<variable name="Cuadrediario_valorbau_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{Cuadrediario_valorbau}]]></variableExpression>
+	</variable>
+	<variable name="Cuadrediario_valorbau_2" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{Cuadrediario_valorbau}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="43" uuid="973c349f-7402-45c9-91a0-abfc9bf98f83"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Arqueo de caja]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="7" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="83" height="20" uuid="f44b704a-befa-423d-bc4c-7de608544e79"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. acta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="0" width="44" height="20" uuid="a1f370e1-c5e0-4004-ac34-666597060852"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Libro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="0" width="38" height="20" uuid="4b7e8dca-1dc4-4769-a503-9da1aec77b65"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pag.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="0" width="100" height="20" uuid="cc58d0b6-924d-4925-9bea-93b709d302fa"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="0" width="100" height="20" uuid="12739d4f-93b3-4ccb-8531-0fc9203fc4cb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="0" width="64" height="20" uuid="1bad4d47-3769-494f-a5e8-a3992074e1a4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="501" y="2" width="54" height="20" uuid="874250b3-d170-491f-9e74-460d4b482f4b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="cac86737-0915-4b37-8268-c3db7a701551"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="83" height="20" uuid="ff83fbcc-3847-4df2-b9de-2532a66b5f45"/>
+				<textFieldExpression><![CDATA[$F{Cuadrediario_noacta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="0" width="44" height="20" uuid="2c3fe5b6-18a9-4a01-8a5a-038d7dc37fe1"/>
+				<textFieldExpression><![CDATA[$F{Cuadrediario_libroasenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="0" width="38" height="20" uuid="342896ea-67ac-4f4a-96f4-a13d94507340"/>
+				<textFieldExpression><![CDATA[$F{Cuadrediario_pagina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="0" width="100" height="20" uuid="aeaed294-1991-4167-8bbf-a8e506f67265"/>
+				<textFieldExpression><![CDATA[$F{Cuadrediario_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="0" width="100" height="20" uuid="bfed93cb-ae91-4953-97ad-8d81628997ea"/>
+				<textFieldExpression><![CDATA[$F{Cuadrediario_apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="0" width="64" height="20" uuid="a21cf6dd-fb90-4a80-a16c-ab7d1145e757"/>
+				<textFieldExpression><![CDATA[$F{Cuadrediario_fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="501" y="0" width="54" height="20" uuid="c52d1daa-0d1f-4ef7-83eb-0baaca55487e"/>
+				<textFieldExpression><![CDATA[$F{Cuadrediario_valorbau}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="426" y="0" width="129" height="36" uuid="448626aa-6170-43c3-b2f6-df42ed8ce8fd"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Cuadrediario_valorbau_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="358" y="1" width="68" height="35" uuid="4d0e335d-a577-450f-84ae-4d57b3467e90"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="426" y="35" width="129" height="1" uuid="78514728-717d-408c-a142-d726d34e0481"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

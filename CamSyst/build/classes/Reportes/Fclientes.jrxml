@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5976dac3-f071-4203-9695-6dafd340fc74">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     DatosEmpresa."nombre" AS DatosEmpresa_nombre,
+     DatosEmpresa."eslogan" AS DatosEmpresa_eslogan,
+     DatosEmpresa."rnc" AS DatosEmpresa_rnc,
+     DatosEmpresa."ncf" AS DatosEmpresa_ncf,
+     DatosEmpresa."direccion" AS DatosEmpresa_direccion,
+     DatosEmpresa."tele1" AS DatosEmpresa_tele1,
+     DatosEmpresa."tele2" AS DatosEmpresa_tele2,
+     DatosEmpresa."cajaChica" AS DatosEmpresa_cajaChica,
+     DatosEmpresa."correo" AS DatosEmpresa_correo,
+     detallefat."n_factura" AS detallefat_n_factura,
+     detallefat."codpro" AS detallefat_codpro,
+     detallefat."producto" AS detallefat_producto,
+     detallefat."cantidad" AS detallefat_cantidad,
+     detallefat."precio_unit" AS detallefat_precio_unit,
+     detallefat."precio_total" AS detallefat_precio_total,
+     detallefat."direccion" AS detallefat_direccion,
+     detallefat."cedula" AS detallefat_cedula,
+     detallefat."nombreVende" AS detallefat_nombreVende,
+     detallefat."nombreCliente" AS detallefat_nombreCliente,
+     facturaCli."n_factura" AS facturaCli_n_factura,
+     facturaCli."formaPago" AS facturaCli_formaPago,
+     facturaCli."fechaPago" AS facturaCli_fechaPago,
+     facturaCli."fecha" AS facturaCli_fecha,
+     facturaCli."codcli" AS facturaCli_codcli,
+     facturaCli."rnc" AS facturaCli_rnc,
+     facturaCli."subtotal" AS facturaCli_subtotal,
+     facturaCli."descuento" AS facturaCli_descuento,
+     facturaCli."itbis" AS facturaCli_itbis,
+     facturaCli."total" AS facturaCli_total,
+     Puntos."numerofa" AS Puntos_numerofa,
+     Puntos."codcliente" AS Puntos_codcliente,
+     Puntos."codbluepoint" AS Puntos_codbluepoint,
+     Puntos."nombrecliente" AS Puntos_nombrecliente,
+     Puntos."totalfact" AS Puntos_totalfact,
+     Puntos."puntosacumulados" AS Puntos_puntosacumulados
+FROM
+     "dbo"."facturaCli" facturaCli INNER JOIN "dbo"."detallefat" detallefat ON facturaCli."n_factura" = detallefat."n_factura",
+     "dbo"."DatosEmpresa" DatosEmpresa,
+     "dbo"."Puntos" Puntos]]>
+	</queryString>
+	<field name="DatosEmpresa_nombre" class="java.lang.String"/>
+	<field name="DatosEmpresa_eslogan" class="java.lang.String"/>
+	<field name="DatosEmpresa_rnc" class="java.lang.String"/>
+	<field name="DatosEmpresa_ncf" class="java.lang.String"/>
+	<field name="DatosEmpresa_direccion" class="java.lang.String"/>
+	<field name="DatosEmpresa_tele1" class="java.lang.String"/>
+	<field name="DatosEmpresa_tele2" class="java.lang.String"/>
+	<field name="DatosEmpresa_cajaChica" class="java.math.BigDecimal"/>
+	<field name="DatosEmpresa_correo" class="java.lang.String"/>
+	<field name="detallefat_n_factura" class="java.lang.String"/>
+	<field name="detallefat_codpro" class="java.lang.String"/>
+	<field name="detallefat_producto" class="java.lang.String"/>
+	<field name="detallefat_cantidad" class="java.lang.String"/>
+	<field name="detallefat_precio_unit" class="java.lang.String"/>
+	<field name="detallefat_precio_total" class="java.lang.String"/>
+	<field name="detallefat_direccion" class="java.lang.String"/>
+	<field name="detallefat_cedula" class="java.lang.String"/>
+	<field name="detallefat_nombreVende" class="java.lang.String"/>
+	<field name="detallefat_nombreCliente" class="java.lang.String"/>
+	<field name="facturaCli_n_factura" class="java.lang.String"/>
+	<field name="facturaCli_formaPago" class="java.lang.String"/>
+	<field name="facturaCli_fechaPago" class="java.lang.String"/>
+	<field name="facturaCli_fecha" class="java.lang.String"/>
+	<field name="facturaCli_codcli" class="java.lang.String"/>
+	<field name="facturaCli_rnc" class="java.lang.String"/>
+	<field name="facturaCli_subtotal" class="java.lang.String"/>
+	<field name="facturaCli_descuento" class="java.lang.String"/>
+	<field name="facturaCli_itbis" class="java.lang.String"/>
+	<field name="facturaCli_total" class="java.lang.Float"/>
+	<field name="Puntos_numerofa" class="java.lang.String"/>
+	<field name="Puntos_codcliente" class="java.lang.String"/>
+	<field name="Puntos_codbluepoint" class="java.lang.String"/>
+	<field name="Puntos_nombrecliente" class="java.lang.String"/>
+	<field name="Puntos_totalfact" class="java.lang.Float"/>
+	<field name="Puntos_puntosacumulados" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="33" width="208" height="35" uuid="3baa0b1e-05f8-44ac-b898-e1037421ce0d"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[pruena]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

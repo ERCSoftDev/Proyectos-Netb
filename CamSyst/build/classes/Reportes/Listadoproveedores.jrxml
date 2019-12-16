@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de490eca-b1d5-4f15-bebe-1d05859adc46">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     Proveedor."codprov" AS Proveedor_codprov,
+     Proveedor."Nombreprov" AS Proveedor_Nombreprov,
+     Proveedor."detalleprov" AS Proveedor_detalleprov,
+     Proveedor."direccionprov" AS Proveedor_direccionprov,
+     Proveedor."rnc" AS Proveedor_rnc,
+     Proveedor."cedulaprov" AS Proveedor_cedulaprov,
+     Proveedor."telprov" AS Proveedor_telprov,
+     DatosEmpresa."nombre" AS DatosEmpresa_nombre,
+     DatosEmpresa."eslogan" AS DatosEmpresa_eslogan,
+     DatosEmpresa."rnc" AS DatosEmpresa_rnc,
+     DatosEmpresa."ncf" AS DatosEmpresa_ncf,
+     DatosEmpresa."direccion" AS DatosEmpresa_direccion,
+     DatosEmpresa."tele1" AS DatosEmpresa_tele1,
+     DatosEmpresa."tele2" AS DatosEmpresa_tele2,
+     DatosEmpresa."cajaChica" AS DatosEmpresa_cajaChica,
+     DatosEmpresa."correo" AS DatosEmpresa_correo
+FROM
+     "dbo"."Proveedor" Proveedor,
+     "dbo"."DatosEmpresa" DatosEmpresa]]>
+	</queryString>
+	<field name="Proveedor_codprov" class="java.lang.String"/>
+	<field name="Proveedor_Nombreprov" class="java.lang.String"/>
+	<field name="Proveedor_detalleprov" class="java.lang.String"/>
+	<field name="Proveedor_direccionprov" class="java.lang.String"/>
+	<field name="Proveedor_rnc" class="java.lang.String"/>
+	<field name="Proveedor_cedulaprov" class="java.lang.String"/>
+	<field name="Proveedor_telprov" class="java.lang.String"/>
+	<field name="DatosEmpresa_nombre" class="java.lang.String"/>
+	<field name="DatosEmpresa_eslogan" class="java.lang.String"/>
+	<field name="DatosEmpresa_rnc" class="java.lang.String"/>
+	<field name="DatosEmpresa_ncf" class="java.lang.String"/>
+	<field name="DatosEmpresa_direccion" class="java.lang.String"/>
+	<field name="DatosEmpresa_tele1" class="java.lang.String"/>
+	<field name="DatosEmpresa_tele2" class="java.lang.String"/>
+	<field name="DatosEmpresa_cajaChica" class="java.math.BigDecimal"/>
+	<field name="DatosEmpresa_correo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="139" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="109" width="293" height="20" uuid="98c24af5-bccd-41d3-bc09-52778942d744"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_correo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="49" width="293" height="20" uuid="fcab6b83-d522-42d6-9ced-e5d0dc3a2c2a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_eslogan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="89" width="120" height="20" uuid="9c5d67bb-a054-4425-8188-3a24035c394e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_tele2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="68" y="89" width="34" height="20" uuid="03e4ae28-08e0-40e3-b05f-ffd70a87dd5c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[,Tels.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="102" y="89" width="71" height="20" uuid="39a13c8d-27be-4a05-bce6-6d3f449c8ea3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_tele1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="69" width="293" height="20" uuid="83594e06-9cc4-4b6d-837b-37b5c5166567"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="89" width="81" height="20" uuid="c1345cbe-4e75-4115-b230-c81963edb563"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_rnc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="89" width="13" height="20" uuid="571c7a75-352d-4848-9335-886a507c62aa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[&]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="293" height="49" forecolor="#6666FF" uuid="28b07b7c-ba73-49be-adfa-0d53f1a436a7"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+					<topPen lineWidth="0.5" lineColor="#999999"/>
+					<leftPen lineWidth="0.5" lineColor="#999999"/>
+					<bottomPen lineWidth="0.5" lineColor="#999999"/>
+					<rightPen lineWidth="0.5" lineColor="#999999"/>
+				</box>
+				<textElement>
+					<font size="36" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="264" y="-36" width="100" height="20" uuid="1f636ffc-a6ee-41f8-a6e0-f8443d044ce0"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="109" width="191" height="30" uuid="d0628031-93df-40ac-a8be-0698a30bd5f1"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Listado de proveedores]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="0" width="553" height="1" uuid="f3f8a761-6906-4dad-89d0-15a263886ec6"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="58" height="20" forecolor="#6666FF" uuid="30c585a0-06f0-4e63-9184-7a062a388c9a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="81" height="20" uuid="e781f7fe-b6b0-429f-b358-1507ab03661b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Proveedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="80" height="20" uuid="52e2c7f0-bfa3-4412-b314-e475be546b2a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="0" width="66" height="20" uuid="eb56d03b-bb9d-4166-a62d-b20c0fb254ba"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RNC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="100" height="20" uuid="98933919-7f25-4d42-8da7-2d9820ae0b94"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="0" width="100" height="20" uuid="b2421c33-da2c-497d-928e-79a071a2d22f"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="58" height="20" uuid="36619636-3403-43a4-9e67-f3db85b10ca8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Proveedor_codprov}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="81" height="20" uuid="deffe561-72c2-4161-8e32-5bf6c891883d"/>
+				<textFieldExpression><![CDATA[$F{Proveedor_Nombreprov}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="80" height="20" uuid="4b4e33f2-7692-42cd-b34e-d0db1ff5be5b"/>
+				<textFieldExpression><![CDATA[$F{Proveedor_detalleprov}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="0" width="123" height="20" uuid="b0a6f253-3560-42a5-a410-89fe2d18d7af"/>
+				<textFieldExpression><![CDATA[$F{Proveedor_direccionprov}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="78" height="20" uuid="235cba02-ef41-449d-9b7a-4bd785179aca"/>
+				<textFieldExpression><![CDATA[$F{Proveedor_rnc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="0" width="100" height="20" uuid="766d1399-058b-4476-bc54-4c00bf19c9af"/>
+				<textFieldExpression><![CDATA[$F{Proveedor_telprov}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="0" y="0" width="193" height="34" forecolor="#6666FF" uuid="f8323d25-662c-4da2-aabc-cb8ef8cd283f"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="0" width="226" height="30" uuid="1ca58e03-c130-49fd-a439-c51730d15683"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

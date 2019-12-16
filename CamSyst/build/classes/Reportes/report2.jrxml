@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="236" pageHeight="842" columnWidth="196" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1f31a36-1c73-485a-a0cd-b74f6451a766">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     clientes."codclientes" AS clientes_codclientes,
+     clientes."Nombrecliente" AS clientes_Nombrecliente,
+     clientes."Apellidoscliente" AS clientes_Apellidoscliente,
+     clientes."sexo" AS clientes_sexo,
+     clientes."ced" AS clientes_ced,
+     clientes."telefono" AS clientes_telefono,
+     clientes."cel" AS clientes_cel,
+     clientes."e_mail" AS clientes_e_mail,
+     clientes."direccion" AS clientes_direccion,
+     clientes."bluePoint" AS clientes_bluePoint,
+     clientes."puntos" AS clientes_puntos
+FROM
+     "dbo"."clientes" clientes]]>
+	</queryString>
+	<field name="clientes_codclientes" class="java.lang.String"/>
+	<field name="clientes_Nombrecliente" class="java.lang.String"/>
+	<field name="clientes_Apellidoscliente" class="java.lang.String"/>
+	<field name="clientes_sexo" class="java.lang.String"/>
+	<field name="clientes_ced" class="java.lang.String"/>
+	<field name="clientes_telefono" class="java.lang.String"/>
+	<field name="clientes_cel" class="java.lang.String"/>
+	<field name="clientes_e_mail" class="java.lang.String"/>
+	<field name="clientes_direccion" class="java.lang.String"/>
+	<field name="clientes_bluePoint" class="java.lang.String"/>
+	<field name="clientes_puntos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

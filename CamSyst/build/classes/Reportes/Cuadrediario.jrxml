@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="400" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="030ad8ae-bcab-4b67-876e-fbfd54485a7f">
+	<property name="ireport.zoom" value="0.8264462809917354"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codCuadre" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     CuadreDiario."codCuadre" AS CuadreDiario_codCuadre,
+     CuadreDiario."Fecha" AS CuadreDiario_Fecha,
+     CuadreDiario."totalNC" AS CuadreDiario_totalNC,
+     CuadreDiario."totalCK" AS CuadreDiario_totalCK,
+     CuadreDiario."totalFact" AS CuadreDiario_totalFact,
+     CuadreDiario."EfectivoCaja" AS CuadreDiario_EfectivoCaja,
+     CuadreDiario."Diferencia" AS CuadreDiario_Diferencia,
+     DatosEmpresa."nombre" AS DatosEmpresa_nombre,
+     DatosEmpresa."correo" AS DatosEmpresa_correo
+FROM
+     "dbo"."CuadreDiario" CuadreDiario,
+     "dbo"."DatosEmpresa" DatosEmpresa
+WHERE
+     codCuadre = $P{codCuadre}]]>
+	</queryString>
+	<field name="CuadreDiario_codCuadre" class="java.lang.String"/>
+	<field name="CuadreDiario_Fecha" class="java.lang.String"/>
+	<field name="CuadreDiario_totalNC" class="java.lang.String"/>
+	<field name="CuadreDiario_totalCK" class="java.lang.String"/>
+	<field name="CuadreDiario_totalFact" class="java.lang.String"/>
+	<field name="CuadreDiario_EfectivoCaja" class="java.lang.String"/>
+	<field name="CuadreDiario_Diferencia" class="java.lang.String"/>
+	<field name="DatosEmpresa_nombre" class="java.lang.String"/>
+	<field name="DatosEmpresa_correo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="0" width="168" height="20" uuid="748b4df6-0807-4735-9a44-d24e3f2e20a7"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="68" height="20" uuid="2c86dbdb-872c-43ac-9e93-6cd6fbb86405"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[NO. DE CUADRE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="68" y="20" width="100" height="20" uuid="ce6659cc-6db2-475f-9621-4d08f0de121b"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_codCuadre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="40" width="79" height="20" uuid="59b80c95-d986-4ce1-a3ae-64223090ea15"/>
+				<textElement>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_Fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="89" height="20" uuid="36a4d8f1-e974-4a40-9209-7f0b135b2fa4"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[FECHA DEL CUADRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="168" height="23" uuid="dfaae2f4-b3f1-44a0-8854-824228c8ecca"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Cuadre Diario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="83" width="167" height="21" uuid="aff3f308-772c-4d02-9f31-32e226b704e7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Reporte F]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="109" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="0" width="88" height="20" uuid="691b7965-84c9-4fb8-a1fd-bba99aa4c57d"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_totalCK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="20" width="88" height="20" uuid="08d76abb-c65c-4626-804a-bfc06df02c5e"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_totalFact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="60" width="89" height="20" uuid="a41cfe2f-42f5-4423-b545-e5577b6f5607"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_EfectivoCaja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="85" width="61" height="20" uuid="e15cf4b2-11b9-4ff3-9788-73d2744f3b4a"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_Diferencia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="20" uuid="abf1af6e-fb65-4c72-aa8e-38363ebc3ef1"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Total en Cheques]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="79" height="20" uuid="4b81fed1-a362-4e24-813f-14627ed47d9e"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Total en Facturas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="79" height="20" uuid="9a165f0d-fda1-4e6f-a134-7ddbbe0ae6be"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Efectvo en Caja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="85" width="47" height="20" uuid="527f2a4c-9f24-405d-a855-eff077f1a4ad"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Diferencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="79" height="20" uuid="5b743777-2f26-4544-ab77-27ef878922d3"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Notas de Creditos]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="79" y="40" width="89" height="20" uuid="8726ce61-6fee-497f-b0ad-93a19058edf9"/>
+				<textElement>
+					<font size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuadreDiario_totalNC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="167" height="20" uuid="df684543-9d52-4009-9591-9311b2460db0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="167" height="20" uuid="88daa3e1-df2d-4c19-83fd-abbefc45c98d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DatosEmpresa_correo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
