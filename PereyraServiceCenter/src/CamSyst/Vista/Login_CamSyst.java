@@ -93,6 +93,19 @@ public class Login_CamSyst extends javax.swing.JFrame {
               dispose(); 
           }
           else
+                  if (a <100&&jComboBox1.getSelectedItem().equals("Contabilidad")){
+              a++;
+              jProgressBar1.setValue(a);
+       } 
+          else
+              if(jComboBox1.getSelectedItem().equals("Contabilidad")){
+              objetotimer.stop();
+              Contabilidad fr2=new Contabilidad(); 
+              fr2.setEnabled(true);
+              fr2.show();
+              dispose(); 
+          }
+          else
           if(a <100&&jComboBox1.getSelectedItem().equals("Cajer@s")){
               a++;
               jProgressBar1.setValue(a);

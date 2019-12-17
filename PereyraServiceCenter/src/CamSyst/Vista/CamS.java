@@ -42,6 +42,7 @@ import CamSyst.Consultas.ConsultaPrecioVenta;
 import CamSyst.Consultas.ConsultaPrecioCosto;
 import CamSyst.Consultas.ConsultaProductos;
 import CamSyst.Consultas.ConsultasEmpleados;
+import CamSyst.Modulos;
 import CamSyst.Productos;
 import CamSyst.Proveedor.BuscarArticulos;
 import CamSyst.Proveedor.BuscarProveedor;
@@ -152,6 +153,7 @@ valida();
         jMenuItem67 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem34 = new javax.swing.JMenuItem();
+        jMenuItem78 = new javax.swing.JMenuItem();
         jMenuItem69 = new javax.swing.JMenuItem();
         openMenuItem = new javax.swing.JMenuItem();
         saveMenuItem = new javax.swing.JMenuItem();
@@ -267,14 +269,11 @@ valida();
         setBackground(new java.awt.Color(102, 102, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setExtendedState(MAXIMIZED_BOTH);
-        setLocation(getLocationOnScreen());
-        setLocationByPlatform(true);
-        setMaximizedBounds(getMaximizedBounds());
-        setMaximumSize(getPreferredSize());
-        setMinimumSize(getPreferredSize());
+        setLocation(new java.awt.Point(0, 0));
+        setMaximizedBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setMinimumSize(new java.awt.Dimension(1590, 998));
         setUndecorated(true);
-        setPreferredSize(getPreferredSize());
-        setSize(getPreferredSize());
+        setSize(new java.awt.Dimension(1590, 998));
         setState(4);
 
         jScrollPane2.setAutoscrolls(true);
@@ -742,6 +741,17 @@ valida();
             }
         });
         fileMenu.add(jMenuItem34);
+
+        jMenuItem78.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        jMenuItem78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconfinder_simplenote_334747 (1).png"))); // NOI18N
+        jMenuItem78.setText("Nuevo Modulo");
+        jMenuItem78.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem78.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem78ActionPerformed(evt);
+            }
+        });
+        fileMenu.add(jMenuItem78);
 
         jMenuItem69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/if_34_Custom_Coding_1688841.png"))); // NOI18N
         jMenuItem69.setText("Programador");
@@ -2183,6 +2193,17 @@ try{
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jMenuItem78ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem78ActionPerformed
+         try{
+        Modulos  p= new Modulos ();
+        jDesktopPane1.add(p);
+        p.setLocation(50, 5); 
+        p.show();
+        p.setVisible(true);
+ 
+       }catch(Exception e){}
+    }//GEN-LAST:event_jMenuItem78ActionPerformed
        
     public static void main(String args[]){
         
@@ -2329,6 +2350,7 @@ try{
     private javax.swing.JMenuItem jMenuItem75;
     private javax.swing.JMenuItem jMenuItem76;
     private javax.swing.JMenuItem jMenuItem77;
+    private javax.swing.JMenuItem jMenuItem78;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
