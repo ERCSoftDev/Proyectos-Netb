@@ -113,7 +113,7 @@ public BuscarArticulos2() throws SQLException {
         jButton1.setToolTipText("Buscar producto");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -121,10 +121,9 @@ public BuscarArticulos2() throws SQLException {
         });
 
         jTable1.setAutoCreateRowSorter(true);
-        jTable1.setBackground(new java.awt.Color(102, 102, 102));
         jTable1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTable1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(255, 255, 255));
+        jTable1.setForeground(new java.awt.Color(102, 102, 102));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -184,9 +183,6 @@ public BuscarArticulos2() throws SQLException {
         ));
         jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jTable1.setComponentPopupMenu(jPopupMenu1);
-        jTable1.setGridColor(new java.awt.Color(153, 204, 255));
-        jTable1.setSelectionBackground(new java.awt.Color(153, 204, 255));
-        jTable1.setSelectionForeground(new java.awt.Color(51, 51, 51));
         jTable1.setShowHorizontalLines(false);
         jTable1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

@@ -1,9 +1,7 @@
 
 package actasyst;
 
-import Conexion.ClassConection;
 import java.awt.HeadlessException;
-import java.awt.Image;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -17,20 +15,18 @@ import javax.swing.text.MaskFormatter;
 
 public class NuevaCircuns extends javax.swing.JInternalFrame {
     
-ClassConection conectar=new ClassConection();
+ CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
     Connection con;
     CallableStatement cst;
     ResultSet r;
     
-    String userName;
-    String passWord;
 
-     public NuevaCircuns(String user,String password) {
+     public NuevaCircuns() {
         initComponents();
-        userName = user;
-        passWord = password;
         
-        con=conectar.conecion(user,password);
+        con=conectar.conecion();
         cargar();
     
      try{

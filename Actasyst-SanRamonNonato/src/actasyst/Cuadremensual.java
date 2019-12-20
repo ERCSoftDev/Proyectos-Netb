@@ -1,32 +1,27 @@
 
 package actasyst;
 
-import Conexion.ClassConection;
-import java.awt.HeadlessException;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
 public class Cuadremensual extends javax.swing.JInternalFrame {
    
-   ClassConection conectar=new ClassConection();
+    CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
    Connection cn;
    CallableStatement cts;
    ResultSet r;
+
    
-   String userName;
-   String passWord;
-   
-    public Cuadremensual(String user,String password) {
+    public Cuadremensual(String string, String string1) {
         initComponents();
-        
-      userName = user;
-      passWord = password; 
-      cn=conectar.conecion(user,password);
+
+      cn=conectar.conecion();
       cargarfiltro();
     }
  private void cargarfiltro(){

@@ -3,7 +3,6 @@ package actasyst;
 
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
-import Conexion.ClassConection;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JOptionPane;
@@ -11,19 +10,17 @@ import javax.swing.JOptionPane;
 public class ConsultaBautismos extends javax.swing.JInternalFrame {
 
 private static final long serialVersionUID = 1L;
-ClassConection conectar=new ClassConection();
+CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
    Connection cn;
    CallableStatement cts;
    ResultSet r;
    String userName;
     String passWord;
    
-    public ConsultaBautismos(String user,String password) {
+    public ConsultaBautismos() {
         initComponents();
-        
-      userName = user;
-      passWord = password;   
-      cn=conectar.conecion(user,password);
+    
+      cn=conectar.conecion();
       cargar();
       jTextField1.requestFocusInWindow();
       jTextField1.setEnabled(true);
@@ -654,7 +651,7 @@ jLabel2.setText(""+jTable1.getRowCount());
 
     private void jTable1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTable1KeyPressed
        if(evt.getKeyCode() == KeyEvent.VK_ENTER && userName.equals("Administrador")){
-       Bautismos p=new Bautismos(this.userName,this.passWord);
+       Bautismos p=new Bautismos();
        ActaS.jDesktopPane1.add(p);
        p.show();
        p.setLocation(50, 5);
@@ -666,7 +663,7 @@ jLabel2.setText(""+jTable1.getRowCount());
        
        
         }else if(evt.getKeyCode() == KeyEvent.VK_ENTER && userName.equals("Secretaria")){
-       Bautismos p=new Bautismos(this.userName,this.passWord);
+       Bautismos p=new Bautismos();
        ActaSSecre.jDesktopPane1.add(p);
        p.show();
        p.setLocation(50, 5);
@@ -678,7 +675,7 @@ jLabel2.setText(""+jTable1.getRowCount());
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
        if(userName.equals("Administrador")){
-       Bautismos p=new Bautismos(this.userName,this.passWord);
+       Bautismos p=new Bautismos();
        ActaS.jDesktopPane1.add(p);
        p.show();
        p.setLocation(50, 5);
@@ -690,7 +687,7 @@ jLabel2.setText(""+jTable1.getRowCount());
        
        
         }else if(userName.equals("Secretaria")){
-       Bautismos p=new Bautismos(this.userName,this.passWord);
+       Bautismos p=new Bautismos();
        ActaSSecre.jDesktopPane1.add(p);
        p.show();
        p.setLocation(50, 5);

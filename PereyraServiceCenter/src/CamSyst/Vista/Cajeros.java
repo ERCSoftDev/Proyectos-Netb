@@ -125,14 +125,13 @@ try {
         jDesktopPane1.setBackground(new java.awt.Color(102, 102, 102));
         jDesktopPane1.setAutoscrolls(true);
         jDesktopPane1.setDoubleBuffered(true);
-        jDesktopPane1.setPreferredSize(null);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/if_Plus_2001887.png"))); // NOI18N
         jButton1.setAlignmentY(0.0F);
         jButton1.setAutoscrolls(true);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -221,7 +220,7 @@ try {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/if_send-01_186386 (2).png"))); // NOI18N
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 0), 4, true));
         jButton2.setBorderPainted(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -299,16 +298,16 @@ try {
 
         jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/globe-tools-settings-32.png"))); // NOI18N
         jMenu11.setText("Configuracion idiomas");
-        jMenu11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jMenuItem33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Spain-Flag.png"))); // NOI18N
         jMenuItem33.setText("Español");
-        jMenuItem33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem33.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu11.add(jMenuItem33);
 
         jMenuItem67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/united-states-of-america-usa.png"))); // NOI18N
         jMenuItem67.setText("English");
-        jMenuItem67.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem67.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenu11.add(jMenuItem67);
 
         fileMenu.add(jMenu11);
@@ -317,7 +316,7 @@ try {
         openMenuItem.setMnemonic('o');
         openMenuItem.setText("Acerca de");
         openMenuItem.setToolTipText("Informacion del sistema");
-        openMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        openMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         openMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 openMenuItemActionPerformed(evt);
@@ -329,7 +328,7 @@ try {
         saveMenuItem.setMnemonic('s');
         saveMenuItem.setText("Cambiar sesion");
         saveMenuItem.setToolTipText("cambiar de usuario");
-        saveMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        saveMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         saveMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveMenuItemActionPerformed(evt);
@@ -340,7 +339,7 @@ try {
         jMenuItem35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Blue_Backup_W.png"))); // NOI18N
         jMenuItem35.setText("Backup");
         jMenuItem35.setToolTipText("Copia de seguridad");
-        jMenuItem35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem35.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuItem35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem35ActionPerformed(evt);
@@ -352,7 +351,7 @@ try {
         exitMenuItem.setMnemonic('x');
         exitMenuItem.setText("Salir");
         exitMenuItem.setToolTipText("Salir");
-        exitMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exitMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitMenuItemActionPerformed(evt);
@@ -372,7 +371,7 @@ try {
         copyMenuItem.setMnemonic('4');
         copyMenuItem.setText("Cliente");
         copyMenuItem.setToolTipText("Mantenimiento de cliente");
-        copyMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        copyMenuItem.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         copyMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 copyMenuItemActionPerformed(evt);
@@ -400,7 +399,7 @@ try {
         jMenuItem19.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F12, 0));
         jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/if_dollar-exchange_532645.png"))); // NOI18N
         jMenuItem19.setText("Gastos / Ingresos");
-        jMenuItem19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem19.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem19ActionPerformed(evt);
@@ -461,11 +460,11 @@ try {
 
         jMenu26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconfinder_2_-_Cash_Register_2102044.png"))); // NOI18N
         jMenu26.setText("Ventas");
-        jMenu26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu26.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/money-24.png"))); // NOI18N
         jMenuItem4.setText("Cuadre Diario");
-        jMenuItem4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -520,11 +519,15 @@ try {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1250, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1240, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 801, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
         );
 
         pack();

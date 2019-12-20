@@ -57,7 +57,7 @@ private void desabilitar(){
     jPasswordField1.setEnabled(false);
     jPasswordField2.setEnabled(false);
     jComboBox1.setEnabled(false);
-    jComboBox1.setEnabled(false);
+    //jComboBox1.setEnabled(false);
     
     }
 private void registrarUsuario(){
@@ -123,7 +123,7 @@ jCheckBox10.setEnabled(false);  jCheckBox20.setEnabled(false);jCheckBox30.setEna
 }
 private void Administrador(){
        jCheckBox1.setSelected(true);  jCheckBox21.setSelected(true);  jCheckBox41.setSelected(true);
-         jCheckBox22.setSelected(true);  jCheckBox42.setSelected(true);
+       jCheckBox22.setSelected(true); jCheckBox42.setSelected(true);
        jCheckBox3.setSelected(true);  jCheckBox23.setSelected(true);  jCheckBox43.setSelected(true);
        jCheckBox4.setSelected(true);  jCheckBox24.setSelected(true);  jCheckBox44.setSelected(true);
        jCheckBox5.setSelected(true);  jCheckBox25.setSelected(true);  jCheckBox45.setSelected(true);
@@ -1317,7 +1317,7 @@ String iduser=this.jTextField2.getText();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       newjframe();
+//       newjframe();
     }//GEN-LAST:event_jButton2ActionPerformed
 
             public void run() {

@@ -3,10 +3,7 @@ package actasyst;
 
 import java.awt.HeadlessException;
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import Conexion.ClassConection;
 import java.text.ParseException;
 import java.util.Calendar;
 import javax.swing.JFormattedTextField;
@@ -19,13 +16,14 @@ public class matrimonios extends javax.swing.JInternalFrame {
    CallableStatement cts;
    ResultSet r;
    Connection cn;
-   ClassConection conectar=new ClassConection();
-   
-    public matrimonios(String user,String password) {
+   CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
+    public matrimonios() {
         initComponents();
         BOTONES();
         DESABILITAR();
-        cn=conectar.conecion(user,password);
+        cn=conectar.conecion();
         cargar();
         
     try

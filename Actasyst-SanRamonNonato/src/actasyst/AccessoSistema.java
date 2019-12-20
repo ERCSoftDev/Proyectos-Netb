@@ -1,17 +1,12 @@
 
 package actasyst;
 
-import Conexion.ClassConection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
@@ -21,13 +16,13 @@ public class AccessoSistema extends javax.swing.JFrame {
 
   private static final long serialVersionUID = 1L;
   
-  ClassConection conectar = new ClassConection();
+   CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
   Connection con;
   CallableStatement cst;
   ResultSet r;
-       
-       private String user;
-       private String password;
+
 
   public Timer objetotimer;
   public int a;
@@ -51,9 +46,9 @@ public class AccessoSistema extends javax.swing.JFrame {
 	                        if(  user.equals(user)&& password.equals(password))
 
 	                        {
-                                this.user=user;
-                                this.password=password;
-                                conectar.conecion(this.user,this.password);
+//                                this.user=user;
+                            //    this.password=password;
+                            //    conectar.conecion(this.user,this.password);
                                 
 	                          objetotimer.start();
                                     
@@ -92,16 +87,17 @@ public class claseTimer implements ActionListener{
               a++;
               jProgressBar1.setValue(a);
                }
-          else{
+         /* else{
               if(user.equals("Administrador")){
               objetotimer.stop();     
               //pass=admin010225
-              ActaS fr2=new ActaS(AccessoSistema.this.user, AccessoSistema.this.password); 
+              ActaS fr2=new ActaS(); 
               fr2.setEnabled(true); 
               fr2.show();
               cerrar();
               JOptionPane.showMessageDialog(rootPane,"Bienvenido Sr/a "+user+" ActaSyst 7.0 ");
-          } else{
+         // } 
+              else{
               if(user.equals("Secretaria")){
               objetotimer.stop();     
                //pass=secre148214
@@ -114,7 +110,7 @@ public class claseTimer implements ActionListener{
 
               objetotimer.stop();
 
-          }}}
+          }}*/}
     }
 private void cerrar(){
    this.dispose(); 

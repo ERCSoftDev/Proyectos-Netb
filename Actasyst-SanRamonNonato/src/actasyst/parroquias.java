@@ -1,7 +1,6 @@
 
 package actasyst;
 
-import Conexion.ClassConection;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import java.sql.CallableStatement;
@@ -13,22 +12,19 @@ import javax.swing.table.DefaultTableModel;
 
 public class parroquias extends javax.swing.JInternalFrame {
 
-    ClassConection conectar=new ClassConection();
+     CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
 
     Connection con;
     CallableStatement cst;
     ResultSet r;
-    
-    String userName;
-    String passWord;
-    
-    public parroquias(String user,String password) {
-        initComponents();
-        
-        userName = user;
-        passWord = password;
 
-    con=conectar.conecion(user,password);
+    
+    public parroquias() {
+        initComponents();
+
+    con=conectar.conecion();
     generarcodigo();
     cargar();
     }

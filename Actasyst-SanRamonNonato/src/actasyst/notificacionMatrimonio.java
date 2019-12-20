@@ -5,18 +5,20 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import Conexion.ClassConection;
 import java.util.Calendar;
 public final class notificacionMatrimonio extends javax.swing.JInternalFrame {
 
     private static final long serialVersionUID = 1L;
+   CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
    Connection cn;
    CallableStatement cts;
    ResultSet r;
-   ClassConection conectar=new ClassConection();
-    public notificacionMatrimonio(String user,String password) {
+   String userName;
+   String passWord;
+   
+    public notificacionMatrimonio() {
         initComponents();
-          cn=conectar.conecion(user,password);
+          cn=conectar.conecion();
         cargar();   
         DESABILITAR();
         BOTONES();

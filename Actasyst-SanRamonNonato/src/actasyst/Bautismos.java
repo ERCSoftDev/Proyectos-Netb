@@ -6,7 +6,6 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
-import Conexion.ClassConection;
 import com.mxrck.autocompleter.TextAutoCompleter;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
@@ -14,9 +13,6 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-import com.inet.jortho.FileUserDictionary;
-import com.inet.jortho.SpellChecker;
-import java.text.SimpleDateFormat;
 import javax.swing.ListSelectionModel;
 
 
@@ -24,7 +20,7 @@ public class Bautismos extends javax.swing.JInternalFrame {
 
 private static final long serialVersionUID = 1L;
 
-ClassConection conectar=new ClassConection();
+CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
 
     Connection con;
     CallableStatement cst;
@@ -33,14 +29,13 @@ ClassConection conectar=new ClassConection();
      String userName;
      String passWord;
     
-    public Bautismos(String user,String password){
+    public Bautismos(){
     initComponents();
-    userName = user;
-    passWord = password;
+    
 
-    jLabel32.setText(""+user);
+    //jLabel32.setText(""+user);
 
-    con=conectar.conecion(user,password);
+   con=conectar.conecion();
     
     cargar();
     Items();
@@ -48,7 +43,7 @@ ClassConection conectar=new ClassConection();
     mostrarparroquias();
     mostrarcircu();
     //SpellChecker.setUserDictionaryProvider(new FileUserDictionary());
-   // SpellChecker.registerDictionaries(null,"C:\\Users\\Computech\\Documents\\NetBeansProjects\\Actasyst-SanRamonNonato\\build");
+   // SpellChecker.registerDictionries(null,"C:\\Users\\Computech\\Documents\\NetBeansProjects\\Actasyst-SanRamonNonato\\build");
    // SpellChecker.register(jTextField21);
    // SpellChecker.register(jTextField5);
    // SpellChecker.register(jTextField2);
@@ -2451,7 +2446,7 @@ char car = evt.getKeyChar();
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         
         ConsultaBautismos cb; 
-        cb= new ConsultaBautismos(this.userName,this.passWord);
+        cb= new ConsultaBautismos();
         ActaS.jDesktopPane1.add(cb);
         cb.toFront();
         cb.setLocation(50,10);
@@ -2461,7 +2456,7 @@ char car = evt.getKeyChar();
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         if(userName.equals("Secretaria")){
-        ConsultaBautismos cb; cb= new ConsultaBautismos(this.userName,this.passWord);
+        ConsultaBautismos cb; cb= new ConsultaBautismos();
         ActaSSecre.jDesktopPane1.add(cb);
         cb.toFront();
         cb.setLocation(50,10);
@@ -2470,7 +2465,7 @@ char car = evt.getKeyChar();
     }//GEN-LAST:event_jButton6ActionPerformed
         else 
             if(userName.equals("Administrador")){
-        ConsultaBautismos cb; cb= new ConsultaBautismos(this.userName,this.passWord);
+        ConsultaBautismos cb; cb= new ConsultaBautismos();
         ActaS.jDesktopPane1.add(cb);
         cb.toFront();
         cb.setLocation(50,10);
@@ -2512,7 +2507,7 @@ char car = evt.getKeyChar();
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
 
         parroquias c; 
-        c= new parroquias(this.userName,this.passWord);
+        c= new parroquias();
         ActaS.jDesktopPane1.add(c);
         c.toFront();
         c.setLocation(50,10);
@@ -2686,7 +2681,7 @@ char car = evt.getKeyChar();
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         Circunscripcion c; 
-        c= new Circunscripcion(this.userName,this.passWord);
+        c= new Circunscripcion();
         ActaS.jDesktopPane1.add(c);
         c.toFront();
         c.setLocation(50,10);

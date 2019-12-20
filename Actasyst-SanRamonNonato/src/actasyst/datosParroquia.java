@@ -1,7 +1,6 @@
 
 package actasyst;
 
-import Conexion.ClassConection;
 import java.awt.HeadlessException;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -13,21 +12,19 @@ import javax.swing.JOptionPane;
 
 
 public class datosParroquia extends javax.swing.JInternalFrame {
-   ClassConection conectar=new ClassConection();
+    CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
+
    Connection cn;
    CallableStatement cts;
    ResultSet r;
-   
-   String userName;
-   String passWord;
+
  
-    public datosParroquia(String user,String password) {
+    public datosParroquia(String string, String string1) {
         initComponents();
        
-        
-      userName = user;
-      passWord = password; 
-      cn=conectar.conecion(user,password);
+      cn=conectar.conecion();
         cargarEmpresa();
         habilitar2();
         if(jTextField1.getText().length()>1){
@@ -193,7 +190,7 @@ private void habilitar2(){
 
         jLabel9.setText("jLabel9");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 255)));
 
@@ -239,7 +236,7 @@ private void habilitar2(){
         jLabel12.setText("Correo:");
 
         jButton5.setText("Enviar");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -362,7 +359,7 @@ private void habilitar2(){
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCheckBox1.setText("Habilitar Edicion");
-        jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jCheckBox1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jCheckBox1MouseClicked(evt);
@@ -387,7 +384,7 @@ private void habilitar2(){
         jButton4.setText("Editar");
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -398,7 +395,7 @@ private void habilitar2(){
         jButton3.setToolTipText("Imprimir ficha de parroquia");
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1452221026_101.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -435,10 +432,10 @@ private void habilitar2(){
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
-                        .addComponent(jCheckBox1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jCheckBox1))
                     .addComponent(jButton1))
                 .addContainerGap())
         );

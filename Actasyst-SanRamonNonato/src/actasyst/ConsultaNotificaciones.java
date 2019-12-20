@@ -5,7 +5,6 @@
 package actasyst;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
-import Conexion.ClassConection;
 
 /**
  *
@@ -18,18 +17,21 @@ public class ConsultaNotificaciones extends javax.swing.JInternalFrame {
     /**
      * Creates new form ConsultaClientes
      */
-    ClassConection conectar=new ClassConection();
+     CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
     Connection cn;
-   CallableStatement cts;
-   ResultSet r;
-    public ConsultaNotificaciones(String user,String password) {
+    CallableStatement cts;
+    ResultSet r;
+    
+    public ConsultaNotificaciones() {
         initComponents();
         jComboBox1.addItem("Seleccione....");
         jComboBox1.addItem("M");
         jComboBox1.addItem("F");
         
         jTextField1.setEnabled(false);
-         cn=conectar.conecion(user,password);
+         cn=conectar.conecion();
        cargar();
     }
 private void cargar(){

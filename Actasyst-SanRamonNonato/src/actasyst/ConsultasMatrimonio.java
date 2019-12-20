@@ -4,21 +4,23 @@ package actasyst;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 
-import Conexion.ClassConection;
 public final class ConsultasMatrimonio extends javax.swing.JInternalFrame {
 
     private static final long serialVersionUID = 1L;
 
-    ClassConection conectar=new ClassConection();
+     CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
     Connection cn;
    CallableStatement cts;
    ResultSet r;
-    public ConsultasMatrimonio(String user,String password) throws SQLException {
+   
+    public ConsultasMatrimonio() throws SQLException {
         initComponents();
         jComboBox1.addItem("Seleccione...");
         jComboBox1.addItem("M");
         jComboBox1.addItem("F");
-        cn=conectar.conecion(user,password);
+        cn=conectar.conecion();
                jTextField1.setEnabled(false);
          cargar();
     }

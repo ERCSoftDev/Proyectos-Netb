@@ -1165,7 +1165,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
             }
         });
 
-        jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox1ActionPerformed(evt);
@@ -1218,13 +1218,61 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jtableDetalle.setBackground(new java.awt.Color(102, 102, 102));
         jtableDetalle.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(204, 204, 255)));
         jtableDetalle.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jtableDetalle.setForeground(new java.awt.Color(204, 204, 204));
         jtableDetalle.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
                 "Codigo", "Descripcion", "Detalle", "Cantidad", "Precio", "Itbis", "Itbis Calculado", "Total"
@@ -1240,7 +1288,6 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
         });
         jtableDetalle.setFocusTraversalPolicyProvider(true);
         jtableDetalle.setGridColor(new java.awt.Color(153, 204, 255));
-        jtableDetalle.setSelectionBackground(new java.awt.Color(153, 204, 255));
         jtableDetalle.setShowHorizontalLines(false);
         jtableDetalle.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1256,7 +1303,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/if_send-01_186386.png"))); // NOI18N
         jButton5.setToolTipText("Suspender factura");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -1273,7 +1320,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
         eliminarFila.setToolTipText("Eliminar producto de la lista");
         eliminarFila.setBorderPainted(false);
         eliminarFila.setContentAreaFilled(false);
-        eliminarFila.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        eliminarFila.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         eliminarFila.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eliminarFilaActionPerformed(evt);
@@ -1285,7 +1332,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
         jButton3.setToolTipText("Salir de esta ventana");
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -1297,7 +1344,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
         jButton6.setToolTipText("Realizar calculo");
         jButton6.setBorderPainted(false);
         jButton6.setContentAreaFilled(false);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton6.setFocusPainted(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1307,7 +1354,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconfinder_Save_85542 (1).png"))); // NOI18N
         jButton1.setToolTipText("Registrar factura");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1317,7 +1364,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
 
         NoFactSusp.setBackground(new java.awt.Color(153, 204, 255));
         NoFactSusp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/if_Document_file_contract_send_1886905.png"))); // NOI18N
-        NoFactSusp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        NoFactSusp.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         NoFactSusp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NoFactSuspActionPerformed(evt);
@@ -1367,7 +1414,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jButton5)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 204, 255), 3, true));
@@ -1408,7 +1455,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
         buscarClientes.setToolTipText("Agregar cliente");
         buscarClientes.setBorderPainted(false);
         buscarClientes.setContentAreaFilled(false);
-        buscarClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buscarClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         buscarClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buscarClientesActionPerformed(evt);
@@ -1502,7 +1549,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(22, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(buscarClientes)
@@ -1577,7 +1624,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
                 .addGap(200, 200, 200))
         );
 
-        buscarArticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iconfinder_wheel_48014 (1).png"))); // NOI18N
+        buscarArticulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Screenshot (17).png"))); // NOI18N
         buscarArticulo.setToolTipText("agregar articulo");
         buscarArticulo.setBorderPainted(false);
         buscarArticulo.setContentAreaFilled(false);
@@ -1622,7 +1669,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
         jButton8.setToolTipText("Acumula Puntos Azules");
         jButton8.setBorderPainted(false);
         jButton8.setContentAreaFilled(false);
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton8MouseClicked(evt);
@@ -1751,14 +1798,14 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
                                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel14)
                                     .addComponent(jLabel13)
-                                    .addComponent(buscarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jtf_total))
                                 .addGap(5, 5, 5))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel5)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addContainerGap())
+                            .addComponent(buscarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1796,7 +1843,7 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jlb_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 12, Short.MAX_VALUE))
+                                .addGap(0, 3, Short.MAX_VALUE))
                             .addComponent(jTextField2)
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1805,21 +1852,20 @@ private static double redondearPuntos  (double suma,int numDecimal)  {
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(buscarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
+                        .addGap(28, 28, 28)
+                        .addComponent(buscarArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtf_total))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8))
+                        .addComponent(jtf_total, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();

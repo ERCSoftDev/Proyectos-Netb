@@ -1,31 +1,26 @@
 
 package actasyst;
 
-import Conexion.ClassConection;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class CuadreDiario extends javax.swing.JInternalFrame {
- ClassConection conectar=new ClassConection();
+  CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   String userName;
+   String passWord;
    Connection cn;
    CallableStatement cts;
    ResultSet r;
-   
-   String userName;
-   String passWord;
-    public CuadreDiario(String user,String password) {
+
+    public CuadreDiario(String string, String string1) {
         initComponents();      
-        
-      userName = user;
-      passWord = password; 
-      cn=conectar.conecion(user,password);
+
+      cn=conectar.conecion();
       cargarcuadre();
       sumartotalbau();
         Calendar cal=Calendar.getInstance();

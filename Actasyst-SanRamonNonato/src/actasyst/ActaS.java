@@ -6,28 +6,26 @@ import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import Conexion.ClassConection;
 import javax.swing.ImageIcon;
 
 public class ActaS extends javax.swing.JFrame{
 
     private static final long serialVersionUID = 1L;
 
-    ClassConection  conectar= new ClassConection();
-    Connection con;
-    CallableStatement cst;
-    ResultSet r;
-    String userName;
-    String passWord;
+    public static Connection cn;
+   public static CallableStatement cts;
+     PreparedStatement st;
+   public static ResultSet r;
+   public static String sql;
    
-    public ActaS(String user, String password) {
+   CamSyst.Controlador.ClassConection conectar=new CamSyst.Controlador.ClassConection();
+   
+    public ActaS() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/A.png")).getImage());
-        
-        userName = user;
-        passWord = password;
-        
-        jLabel3.setText(""+user);
+        cn=conectar.conecion();
+
+     //   jLabel3.setText(""+user);
       
 Calendar cal=Calendar.getInstance();
 String fecha=cal.get(Calendar.DATE) +"/"+(cal.get(Calendar.MONTH)+1)+"/"+cal.get(Calendar.YEAR);
@@ -644,7 +642,7 @@ System.exit(0);
     private void cutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cutMenuItemActionPerformed
         // TODO add your handling code here:
        try{
-        notificacionMatrimonio cl =new notificacionMatrimonio(this.userName,this.passWord);
+        notificacionMatrimonio cl =new notificacionMatrimonio();
         jDesktopPane1.add(cl);
         cl.show();
         cl.setLocation(50, 5);
@@ -654,7 +652,7 @@ System.exit(0);
     private void copyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyMenuItemActionPerformed
         // TODO add your handling code here:
         try{
-        Bautismos p=new Bautismos(this.userName,this.passWord);
+        Bautismos p=new Bautismos();
        jDesktopPane1.add(p);
         p.show();
         p.setLocation(50, 5);
@@ -693,7 +691,7 @@ System.exit(0);
     private void pasteMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pasteMenuItemActionPerformed
         // TODO add your handling code here:
        try{
-        matrimonios em = new matrimonios(this.userName,this.passWord);
+        matrimonios em = new matrimonios();
         jDesktopPane1.add(em);
         em.show();
         em.setLocation(50, 10);
@@ -709,7 +707,7 @@ System.exit(0);
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
        try{
-        ConsultaNotificaciones cc=new ConsultaNotificaciones(this.userName,this.passWord);
+        ConsultaNotificaciones cc=new ConsultaNotificaciones();
         jDesktopPane1.add(cc);
         cc.show();
         cc.setLocation(50, 50);
@@ -717,25 +715,22 @@ System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        ConsultasMatrimonio ce;
         try {
-            ce = new ConsultasMatrimonio(this.userName,this.passWord);
+            // TODO add your handling code here:
+            ConsultasMatrimonio ce = new ConsultasMatrimonio();
             jDesktopPane1.add(ce);
             ce.setLocation(50, 5);
-        ce.show();
-        ce.setVisible(true);
+            ce.show();     
+            ce.setVisible(true);
         } catch (SQLException ex) {
             Logger.getLogger(ActaS.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
        try{ 
-        ConsultaBautismos cp = new ConsultaBautismos(this.userName,this.passWord);
+        ConsultaBautismos cp = new ConsultaBautismos();
         jDesktopPane1.add(cp);
         cp.setLocation(50, 5);
         cp.show();
@@ -757,7 +752,7 @@ System.exit(0);
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          try{
-       Bautismos p=new Bautismos(this.userName,this.passWord);
+       Bautismos p=new Bautismos();
        jDesktopPane1.add(p);
        p.show();
        p.setLocation(50, 5);
@@ -767,7 +762,7 @@ System.exit(0);
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
        try{
-       Bautismos p=new Bautismos(this.userName,this.passWord);
+       Bautismos p=new Bautismos();
        jDesktopPane1.add(p);
        p.show();
        p.setLocation(50, 5);
@@ -777,7 +772,7 @@ System.exit(0);
 
     private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
          try{
-        Bautismos p=new Bautismos(this.userName,this.passWord);
+        Bautismos p=new Bautismos();
        jDesktopPane1.add(p);
        p.show();
     }catch
@@ -787,7 +782,7 @@ System.exit(0);
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         try {
-        ConsultaBautismos p=new ConsultaBautismos(this.userName,this.passWord);
+        ConsultaBautismos p=new ConsultaBautismos();
        jDesktopPane1.add(p);
        p.show();
       }catch(Exception e){} 
@@ -795,7 +790,7 @@ System.exit(0);
 
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
          try {
-        matrimonios p=new matrimonios(this.userName,this.passWord);
+        matrimonios p=new matrimonios();
        jDesktopPane1.add(p);
        p.show();
          }catch(Exception e){}// TODO add your handling code here:
@@ -803,7 +798,7 @@ System.exit(0);
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
        try{
-        NuevaCircuns p=new NuevaCircuns(this.userName,this.passWord);
+        NuevaCircuns p=new NuevaCircuns();
        jDesktopPane1.add(p);
        p.show();
         //p.setLocation(50, 5);
@@ -814,7 +809,7 @@ System.exit(0);
       
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try{
-        Creador p=new Creador(this.userName,this.passWord);
+        Creador p=new Creador();
        jDesktopPane1.add(p);
        p.show();
         //p.setLocation(50, 5);
@@ -828,7 +823,7 @@ System.exit(0);
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
        ConsultaBautismos.jTextField1.requestFocusInWindow();
         try{
-        datosParroquia per=new datosParroquia(this.userName,this.passWord);
+        datosParroquia per=new datosParroquia("", "");
         jDesktopPane1.add(per);
         per.show();
         per.setLocation(200, 50);
@@ -849,7 +844,7 @@ System.exit(0);
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        try{
-        datosParroquia per=new datosParroquia(this.userName,this.passWord);
+        datosParroquia per=new datosParroquia("", "");
         jDesktopPane1.add(per);
         per.show();
         per.setLocation(350, 50);
@@ -858,7 +853,7 @@ System.exit(0);
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
        try{
-        CuadreDiario per=new CuadreDiario (this.userName,this.passWord);
+        CuadreDiario per=new CuadreDiario ("", "");
         jDesktopPane1.add(per);
         per.show();
         per.setLocation(200, 50);
@@ -879,7 +874,7 @@ System.exit(0);
     }
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
        try{   
-       matrimonios par=new matrimonios(this.userName,this.passWord);
+       matrimonios par=new matrimonios();
        jDesktopPane1.add(par);
        par.show();
        par.setLocation(50, 5);
@@ -888,7 +883,7 @@ System.exit(0);
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
         try{   
-       matrimonios par=new matrimonios(this.userName,this.passWord);
+       matrimonios par=new matrimonios();
        jDesktopPane1.add(par);
        par.show();
        par.setLocation(50, 5);
@@ -897,7 +892,7 @@ System.exit(0);
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
         try{   
-       Cuadremensual par=new Cuadremensual(this.userName,this.passWord);
+       Cuadremensual par=new Cuadremensual("", "");
        jDesktopPane1.add(par);
        par.show();
        par.setLocation(50, 5);
